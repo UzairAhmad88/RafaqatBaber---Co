@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-manrope), sans-serif;
+  --font-serif: var(--font-dm-serif), serif;
+
+  --color-forest: #123C32;
+  --color-green: #2F6F5E;
+  --color-sage: #A8BDAF;
+  --color-ivory: #F7F6F1;
+  --color-charcoal: #17201D;
+  --color-muted: #68736E;
+  --color-gold: #B89B5E;
+  --color-gold-hover: #D4AF37;
+}
+
+:root {
+  --forest: #123C32;
+  --green: #2F6F5E;
+  --sage: #A8BDAF;
+  --ivory: #F7F6F1;
+  --charcoal: #17201D;
+  --muted: #68736E;
+  --gold: #B89B5E;
+  --gold-hover: #D4AF37;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope), sans-serif;
+}
+
+::selection {
+  background: var(--sage);
+  color: var(--charcoal);
+}
+
+.container-site {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .container-site {
+    width: min(100% - 28px, 1180px);
+  }
+}
+
+.display-font {
+  font-family: var(--font-dm-serif), serif;
+}
+
+/* Glassmorphism utility for floating header */
+.glass-header {
+  background: rgba(247, 246, 241, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+

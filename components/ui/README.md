@@ -1,0 +1,1 @@
+Reusable UI components belong here: Button, SectionHeading, Container, Badge, accessible form controls, etc.

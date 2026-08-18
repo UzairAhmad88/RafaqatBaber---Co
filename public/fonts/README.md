@@ -1,0 +1,1 @@
+If self-hosting fonts, place licensed font files here. Prefer next/font for Google-hosted fonts.

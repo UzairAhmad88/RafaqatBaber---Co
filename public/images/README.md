@@ -1,0 +1,1 @@
+Add approved firm photography, team portraits, office photos and optimized WebP/AVIF assets here.

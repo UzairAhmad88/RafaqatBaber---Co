@@ -1,0 +1,1 @@
+Add favicon, SVG brand marks and approved icon assets here.
