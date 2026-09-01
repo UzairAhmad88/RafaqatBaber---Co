@@ -40,16 +40,16 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed bottom-0 right-0 top-0 z-50 flex w-full max-w-sm flex-col bg-[#F7F6F1] p-6 shadow-2xl md:hidden"
+            className="fixed bottom-0 right-0 top-0 z-50 flex w-full max-w-sm flex-col bg-[#F8FAFC] p-6 shadow-2xl md:hidden"
           >
             {/* Header */}
             <div className="flex items-center justify-between">
-              <span className="font-sans font-semibold tracking-tight text-[#123C32]">
+              <span className="font-sans font-semibold tracking-tight text-[#0E2238]">
                 Rafaqat Babar & Co.
               </span>
               <button
                 onClick={onClose}
-                className="rounded-full p-2 text-[#17201D]/70 hover:bg-black/5 hover:text-[#17201D] transition-colors"
+                className="rounded-full p-2 text-[#0F172A]/70 hover:bg-black/5 hover:text-[#0F172A] transition-colors"
                 aria-label="Close menu"
               >
                 <X className="h-6 w-6" />
@@ -68,7 +68,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <Link
                     href={link.href}
                     onClick={onClose}
-                    className="group flex items-center justify-between text-2xl font-medium tracking-tight text-[#123C32] hover:text-[#2F6F5E] transition-colors"
+                    className="group flex items-center justify-between text-2xl font-medium tracking-tight text-[#0E2238] hover:text-[#1E3E62] transition-colors"
                   >
                     <span>{link.name}</span>
                     <ArrowRight className="h-5 w-5 -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300" />
@@ -82,7 +82,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <Link
                 href="/contact"
                 onClick={onClose}
-                className="flex items-center justify-center gap-2 w-full rounded-full bg-[#123C32] py-4 text-center font-medium text-white hover:bg-[#2F6F5E] transition-colors shadow-sm"
+                className="flex items-center justify-center gap-2 w-full rounded-full bg-[#0E2238] py-4 text-center font-medium text-white hover:bg-[#1E3E62] transition-colors shadow-sm"
               >
                 Talk to an Advisor
               </Link>

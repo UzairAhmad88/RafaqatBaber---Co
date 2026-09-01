@@ -14,10 +14,10 @@ const services = [
 
 export default function PeshawarOfficePage() {
   return (
-    <div className="bg-[#F7F6F1] min-h-screen pb-20">
+    <div className="bg-[#F8FAFC] min-h-screen pb-20">
 
       {/* Hero */}
-      <section className="py-20 md:py-28 border-b border-black/5 bg-[#123C32] text-white">
+      <section className="py-20 md:py-28 border-b border-black/5 bg-[#0E2238] text-white">
         <div className="container-site">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -26,12 +26,12 @@ export default function PeshawarOfficePage() {
           >
             <Link
               href="/locations"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.2em] uppercase text-[#A8BDAF] hover:text-white transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.2em] uppercase text-[#8EA4BA] hover:text-white transition-colors"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
               All Locations
             </Link>
-            <span className="block text-xs font-semibold tracking-[0.25em] uppercase text-[#A8BDAF]">
+            <span className="block text-xs font-semibold tracking-[0.25em] uppercase text-[#8EA4BA]">
               Head Office · Est. 1986
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
@@ -57,15 +57,15 @@ export default function PeshawarOfficePage() {
             viewport={{ once: true }}
             className="bg-white border border-black/5 rounded-[2rem] p-8 md:p-10 shadow-sm"
           >
-            <h2 className="text-2xl font-bold text-[#123C32] tracking-tight mb-6">Office Information</h2>
+            <h2 className="text-2xl font-bold text-[#0E2238] tracking-tight mb-6">Office Information</h2>
             <div className="space-y-5">
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F7F6F1] text-[#B89B5E]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F8FAFC] text-[#C5A059]">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#B89B5E] tracking-wider uppercase mb-1">Address</p>
-                  <p className="text-sm text-[#68736E] leading-relaxed">
+                  <p className="text-xs font-bold text-[#C5A059] tracking-wider uppercase mb-1">Address</p>
+                  <p className="text-sm text-[#64748B] leading-relaxed">
                     First Floor, Aman Center,<br />
                     Near Custom House, Main University Road,<br />
                     Peshawar, KPK, Pakistan
@@ -74,37 +74,37 @@ export default function PeshawarOfficePage() {
               </div>
               <div className="h-px bg-black/5" />
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F7F6F1] text-[#B89B5E]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F8FAFC] text-[#C5A059]">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#B89B5E] tracking-wider uppercase mb-1">Phone</p>
-                  <a href="tel:+92915703151" className="text-sm text-[#123C32] font-semibold hover:text-[#2F6F5E] transition-colors">
+                  <p className="text-xs font-bold text-[#C5A059] tracking-wider uppercase mb-1">Phone</p>
+                  <a href="tel:+92915703151" className="text-sm text-[#0E2238] font-semibold hover:text-[#1E3E62] transition-colors">
                     +92 91 5703151
                   </a>
                 </div>
               </div>
               <div className="h-px bg-black/5" />
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F7F6F1] text-[#B89B5E]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F8FAFC] text-[#C5A059]">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#B89B5E] tracking-wider uppercase mb-1">Email</p>
-                  <a href="mailto:info@rafaqatbabar.com" className="text-sm text-[#123C32] font-semibold hover:text-[#2F6F5E] transition-colors">
+                  <p className="text-xs font-bold text-[#C5A059] tracking-wider uppercase mb-1">Email</p>
+                  <a href="mailto:info@rafaqatbabar.com" className="text-sm text-[#0E2238] font-semibold hover:text-[#1E3E62] transition-colors">
                     info@rafaqatbabar.com
                   </a>
                 </div>
               </div>
               <div className="h-px bg-black/5" />
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F7F6F1] text-[#B89B5E]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#F8FAFC] text-[#C5A059]">
                   <Clock className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#B89B5E] tracking-wider uppercase mb-1">Office Hours</p>
-                  <p className="text-sm text-[#68736E]">Monday – Friday: 9:00 AM – 5:30 PM</p>
-                  <p className="text-sm text-[#68736E]">Saturday: 9:00 AM – 1:00 PM</p>
+                  <p className="text-xs font-bold text-[#C5A059] tracking-wider uppercase mb-1">Office Hours</p>
+                  <p className="text-sm text-[#64748B]">Monday – Friday: 9:00 AM – 5:30 PM</p>
+                  <p className="text-sm text-[#64748B]">Saturday: 9:00 AM – 1:00 PM</p>
                 </div>
               </div>
             </div>
@@ -118,18 +118,18 @@ export default function PeshawarOfficePage() {
             transition={{ delay: 0.1 }}
             className="bg-white border border-black/5 rounded-[2rem] p-8 md:p-10 shadow-sm"
           >
-            <h2 className="text-2xl font-bold text-[#123C32] tracking-tight mb-6">Services Available at This Office</h2>
+            <h2 className="text-2xl font-bold text-[#0E2238] tracking-tight mb-6">Services Available at This Office</h2>
             <ul className="space-y-3">
               {services.map((s) => (
-                <li key={s} className="flex items-center gap-3 text-sm text-[#68736E]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#B89B5E] shrink-0" />
+                <li key={s} className="flex items-center gap-3 text-sm text-[#64748B]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#C5A059] shrink-0" />
                   {s}
                 </li>
               ))}
             </ul>
             <Link
               href="/services"
-              className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#123C32] hover:text-[#2F6F5E] transition-colors"
+              className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#0E2238] hover:text-[#1E3E62] transition-colors"
             >
               <span>View All Services</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -144,7 +144,7 @@ export default function PeshawarOfficePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#123C32] text-white rounded-[2rem] p-8 shadow-md"
+            className="bg-[#0E2238] text-white rounded-[2rem] p-8 shadow-md"
           >
             <h3 className="text-xl font-bold mb-3">Book a Consultation</h3>
             <p className="text-sm text-white/70 leading-relaxed">
@@ -152,7 +152,7 @@ export default function PeshawarOfficePage() {
             </p>
             <Link
               href="/contact"
-              className="mt-6 flex items-center justify-center gap-2 w-full rounded-full bg-white py-3 text-center text-sm font-semibold text-[#123C32] hover:bg-[#F7F6F1] transition-colors"
+              className="mt-6 flex items-center justify-center gap-2 w-full rounded-full bg-white py-3 text-center text-sm font-semibold text-[#0E2238] hover:bg-[#F8FAFC] transition-colors"
             >
               Get in Touch
             </Link>
@@ -166,7 +166,7 @@ export default function PeshawarOfficePage() {
             transition={{ delay: 0.1 }}
             className="bg-white border border-black/5 rounded-[2rem] p-8 shadow-sm"
           >
-            <h3 className="text-lg font-bold text-[#123C32] mb-4">Other Offices</h3>
+            <h3 className="text-lg font-bold text-[#0E2238] mb-4">Other Offices</h3>
             <div className="space-y-4">
               {[
                 { city: "Islamabad", tag: "Capital Office", href: "/locations/islamabad" },
@@ -175,13 +175,13 @@ export default function PeshawarOfficePage() {
                 <Link
                   key={loc.city}
                   href={loc.href}
-                  className="group flex items-center justify-between p-4 rounded-2xl border border-black/5 hover:border-[#123C32] hover:bg-[#F7F6F1] transition-all duration-200"
+                  className="group flex items-center justify-between p-4 rounded-2xl border border-black/5 hover:border-[#0E2238] hover:bg-[#F8FAFC] transition-all duration-200"
                 >
                   <div>
-                    <p className="text-xs font-bold text-[#B89B5E] tracking-wider uppercase">{loc.tag}</p>
-                    <p className="text-base font-bold text-[#123C32] mt-0.5">{loc.city}</p>
+                    <p className="text-xs font-bold text-[#C5A059] tracking-wider uppercase">{loc.tag}</p>
+                    <p className="text-base font-bold text-[#0E2238] mt-0.5">{loc.city}</p>
                   </div>
-                  <ArrowRight className="h-4 w-4 text-[#68736E] transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 text-[#64748B] transition-transform group-hover:translate-x-1" />
                 </Link>
               ))}
             </div>

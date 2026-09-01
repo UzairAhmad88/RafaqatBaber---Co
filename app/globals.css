@@ -5,24 +5,24 @@
   --font-display: var(--font-manrope), sans-serif;
   --font-serif: var(--font-dm-serif), serif;
 
-  --color-forest: #123C32;
-  --color-green: #2F6F5E;
-  --color-sage: #A8BDAF;
-  --color-ivory: #F7F6F1;
-  --color-charcoal: #17201D;
-  --color-muted: #68736E;
-  --color-gold: #B89B5E;
+  --color-forest: #0E2238;
+  --color-green: #1E3E62;
+  --color-sage: #8EA4BA;
+  --color-ivory: #F8FAFC;
+  --color-charcoal: #0F172A;
+  --color-muted: #64748B;
+  --color-gold: #C5A059;
   --color-gold-hover: #D4AF37;
 }
 
 :root {
-  --forest: #123C32;
-  --green: #2F6F5E;
-  --sage: #A8BDAF;
-  --ivory: #F7F6F1;
-  --charcoal: #17201D;
-  --muted: #68736E;
-  --gold: #B89B5E;
+  --forest: #0E2238;
+  --green: #1E3E62;
+  --sage: #8EA4BA;
+  --ivory: #F8FAFC;
+  --charcoal: #0F172A;
+  --muted: #64748B;
+  --gold: #C5A059;
   --gold-hover: #D4AF37;
 }
 

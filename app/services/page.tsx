@@ -62,15 +62,15 @@ const serviceCategories = [
 
 export default function ServicesPage() {
   return (
-    <div className="bg-[#F7F6F1] min-h-screen pb-20">
+    <div className="bg-[#F8FAFC] min-h-screen pb-20">
       
       {/* Hero Header */}
-      <section className="py-20 md:py-28 border-b border-black/5 bg-[#123C32] text-white">
+      <section className="py-20 md:py-28 border-b border-black/5 bg-[#0E2238] text-white">
         <div className="container-site">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#A8BDAF] mb-4"
+            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#8EA4BA] mb-4"
           >
             What We Offer
           </motion.p>
@@ -98,17 +98,17 @@ export default function ServicesPage() {
               className="bg-white border border-black/5 rounded-[2rem] p-8 md:p-10 shadow-sm flex flex-col justify-between"
             >
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#123C32] tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0E2238] tracking-tight">
                   {cat.title}
                 </h2>
-                <p className="mt-4 text-[#68736E] text-sm sm:text-base leading-relaxed">
+                <p className="mt-4 text-[#64748B] text-sm sm:text-base leading-relaxed">
                   {cat.desc}
                 </p>
                 <div className="h-px bg-black/10 my-6" />
                 <ul className="space-y-3">
                   {cat.subservices.map((sub) => (
-                    <li key={sub} className="flex items-start gap-2.5 text-sm text-[#17201D]">
-                      <CheckCircle2 className="h-4.5 w-4.5 text-[#B89B5E] shrink-0 mt-0.5" />
+                    <li key={sub} className="flex items-start gap-2.5 text-sm text-[#0F172A]">
+                      <CheckCircle2 className="h-4.5 w-4.5 text-[#C5A059] shrink-0 mt-0.5" />
                       <span>{sub}</span>
                     </li>
                   ))}
@@ -117,7 +117,7 @@ export default function ServicesPage() {
               <div className="mt-8 pt-6 border-t border-black/5">
                 <Link
                   href={cat.href}
-                  className="group flex items-center justify-between w-full rounded-full bg-[#F7F6F1] px-6 py-3.5 text-sm font-semibold text-[#123C32] hover:bg-[#123C32] hover:text-white transition-all duration-300"
+                  className="group flex items-center justify-between w-full rounded-full bg-[#F8FAFC] px-6 py-3.5 text-sm font-semibold text-[#0E2238] hover:bg-[#0E2238] hover:text-white transition-all duration-300"
                 >
                   <span>Explore Detail & Approach</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

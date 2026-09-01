@@ -12,10 +12,10 @@ const offices = [
     phone: "+92 91 5703151",
     email: "peshawar@rafaqatbabar.com",
     href: "/locations/peshawar",
-    bg: "bg-[#123C32]",
+    bg: "bg-[#0E2238]",
     text: "text-white",
-    accent: "text-[#A8BDAF]",
-    btn: "bg-white text-[#123C32] hover:bg-[#F7F6F1]",
+    accent: "text-[#8EA4BA]",
+    btn: "bg-white text-[#0E2238] hover:bg-[#F8FAFC]",
   },
   {
     city: "Islamabad",
@@ -25,9 +25,9 @@ const offices = [
     email: "islamabad@rafaqatbabar.com",
     href: "/locations/islamabad",
     bg: "bg-white",
-    text: "text-[#123C32]",
-    accent: "text-[#2F6F5E]",
-    btn: "bg-[#123C32] text-white hover:bg-[#2F6F5E]",
+    text: "text-[#0E2238]",
+    accent: "text-[#1E3E62]",
+    btn: "bg-[#0E2238] text-white hover:bg-[#1E3E62]",
   },
   {
     city: "Kabul",
@@ -37,23 +37,23 @@ const offices = [
     email: "kabul@rafaqatbabar.com",
     href: "/locations/kabul",
     bg: "bg-white",
-    text: "text-[#123C32]",
-    accent: "text-[#2F6F5E]",
-    btn: "bg-[#123C32] text-white hover:bg-[#2F6F5E]",
+    text: "text-[#0E2238]",
+    accent: "text-[#1E3E62]",
+    btn: "bg-[#0E2238] text-white hover:bg-[#1E3E62]",
   },
 ];
 
 export default function LocationsPage() {
   return (
-    <div className="bg-[#F7F6F1] min-h-screen pb-20">
+    <div className="bg-[#F8FAFC] min-h-screen pb-20">
 
       {/* Hero */}
-      <section className="py-20 md:py-28 border-b border-black/5 bg-[#123C32] text-white">
+      <section className="py-20 md:py-28 border-b border-black/5 bg-[#0E2238] text-white">
         <div className="container-site">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#A8BDAF] mb-4"
+            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#8EA4BA] mb-4"
           >
             Our Presence
           </motion.p>
@@ -96,16 +96,16 @@ export default function LocationsPage() {
                   {office.city}
                 </h2>
                 <div className="mt-6 space-y-3">
-                  <div className={`flex items-start gap-2.5 text-sm ${office.city === "Peshawar" ? "text-white/75" : "text-[#68736E]"}`}>
-                    <MapPin className={`h-4 w-4 shrink-0 mt-0.5 ${office.city === "Peshawar" ? "text-[#A8BDAF]" : "text-[#B89B5E]"}`} />
+                  <div className={`flex items-start gap-2.5 text-sm ${office.city === "Peshawar" ? "text-white/75" : "text-[#64748B]"}`}>
+                    <MapPin className={`h-4 w-4 shrink-0 mt-0.5 ${office.city === "Peshawar" ? "text-[#8EA4BA]" : "text-[#C5A059]"}`} />
                     <span>{office.address}</span>
                   </div>
-                  <div className={`flex items-center gap-2.5 text-sm ${office.city === "Peshawar" ? "text-white/75" : "text-[#68736E]"}`}>
-                    <Phone className={`h-4 w-4 shrink-0 ${office.city === "Peshawar" ? "text-[#A8BDAF]" : "text-[#B89B5E]"}`} />
+                  <div className={`flex items-center gap-2.5 text-sm ${office.city === "Peshawar" ? "text-white/75" : "text-[#64748B]"}`}>
+                    <Phone className={`h-4 w-4 shrink-0 ${office.city === "Peshawar" ? "text-[#8EA4BA]" : "text-[#C5A059]"}`} />
                     <a href={`tel:${office.phone.replace(/\s/g, "")}`} className="hover:underline">{office.phone}</a>
                   </div>
-                  <div className={`flex items-center gap-2.5 text-sm ${office.city === "Peshawar" ? "text-white/75" : "text-[#68736E]"}`}>
-                    <Mail className={`h-4 w-4 shrink-0 ${office.city === "Peshawar" ? "text-[#A8BDAF]" : "text-[#B89B5E]"}`} />
+                  <div className={`flex items-center gap-2.5 text-sm ${office.city === "Peshawar" ? "text-white/75" : "text-[#64748B]"}`}>
+                    <Mail className={`h-4 w-4 shrink-0 ${office.city === "Peshawar" ? "text-[#8EA4BA]" : "text-[#C5A059]"}`} />
                     <a href={`mailto:${office.email}`} className="hover:underline break-all">{office.email}</a>
                   </div>
                 </div>
@@ -132,15 +132,15 @@ export default function LocationsPage() {
           viewport={{ once: true }}
           className="rounded-[2rem] bg-white border border-black/5 p-8 md:p-12 text-center shadow-sm"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#123C32] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0E2238] tracking-tight">
             Can&apos;t visit in person?
           </h2>
-          <p className="mt-4 text-[#68736E] text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+          <p className="mt-4 text-[#64748B] text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
             We offer virtual consultations for clients across Pakistan and internationally. Get in touch and we&apos;ll arrange a call at your convenience.
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#123C32] px-7 py-3.5 text-sm font-semibold text-white hover:bg-[#2F6F5E] transition-colors shadow-md"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#0E2238] px-7 py-3.5 text-sm font-semibold text-white hover:bg-[#1E3E62] transition-colors shadow-md"
           >
             Contact Us
           </Link>

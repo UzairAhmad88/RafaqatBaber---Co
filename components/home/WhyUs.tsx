@@ -34,10 +34,10 @@ export default function WhyUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#2F6F5E]">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#1E3E62]">
               Our Core Philosophy
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#123C32] leading-tight">
+            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0E2238] leading-tight">
               Built on Professionalism.<br />Driven by Insight.
             </h2>
           </motion.div>
@@ -55,12 +55,12 @@ export default function WhyUs() {
               className="grid py-8 md:py-12 gap-6 md:grid-cols-[1fr_2fr] items-baseline"
             >
               <div className="flex items-center gap-3">
-                <span className="text-xs text-[#B89B5E] font-mono">0{idx + 1}</span>
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#123C32] tracking-tight">
+                <span className="text-xs text-[#C5A059] font-mono">0{idx + 1}</span>
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#0E2238] tracking-tight">
                   {p.title}
                 </h3>
               </div>
-              <p className="text-base sm:text-lg leading-relaxed text-[#68736E] max-w-2xl">
+              <p className="text-base sm:text-lg leading-relaxed text-[#64748B] max-w-2xl">
                 {p.description}
               </p>
             </motion.div>

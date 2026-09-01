@@ -49,8 +49,8 @@ export default function Header() {
             href="/"
             className={`text-xl font-bold tracking-tight transition-colors ${
               isDarkHeroOverlay
-                ? "text-white hover:text-[#B89B5E]"
-                : "text-[#123C32] hover:text-[#2F6F5E]"
+                ? "text-white hover:text-[#C5A059]"
+                : "text-[#0E2238] hover:text-[#1E3E62]"
             }`}
           >
             Rafaqat Babar & Co.
@@ -72,13 +72,13 @@ export default function Header() {
                         ? "text-white"
                         : "text-white/70 hover:text-white"
                       : isActive
-                        ? "text-[#123C32]"
-                        : "text-[#68736E] hover:text-[#123C32]"
+                        ? "text-[#0E2238]"
+                        : "text-[#64748B] hover:text-[#0E2238]"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 h-0.5 w-full bg-[#B89B5E]" />
+                    <span className="absolute bottom-0 left-0 h-0.5 w-full bg-[#C5A059]" />
                   )}
                 </Link>
               );
@@ -91,8 +91,8 @@ export default function Header() {
               href="/contact"
               className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 shadow-sm ${
                 isDarkHeroOverlay
-                  ? "bg-white text-[#123C32] hover:bg-[#F7F6F1]"
-                  : "bg-[#123C32] text-white hover:bg-[#2F6F5E]"
+                  ? "bg-white text-[#0E2238] hover:bg-[#F8FAFC]"
+                  : "bg-[#0E2238] text-white hover:bg-[#1E3E62]"
               }`}
             >
               Talk to an Advisor
@@ -105,8 +105,8 @@ export default function Header() {
               href="/contact"
               className={`rounded-full px-4 py-2 text-xs font-semibold transition-colors ${
                 isDarkHeroOverlay
-                  ? "bg-white text-[#123C32] hover:bg-[#F7F6F1]"
-                  : "bg-[#123C32] text-white hover:bg-[#2F6F5E]"
+                  ? "bg-white text-[#0E2238] hover:bg-[#F8FAFC]"
+                  : "bg-[#0E2238] text-white hover:bg-[#1E3E62]"
               }`}
             >
               Contact

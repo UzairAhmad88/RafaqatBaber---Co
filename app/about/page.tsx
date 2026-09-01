@@ -30,15 +30,15 @@ const leadership = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-[#F7F6F1] min-h-screen pb-20">
+    <div className="bg-[#F8FAFC] min-h-screen pb-20">
       
       {/* Hero Section */}
-      <section className="py-20 md:py-28 border-b border-black/5 bg-[#123C32] text-white">
+      <section className="py-20 md:py-28 border-b border-black/5 bg-[#0E2238] text-white">
         <div className="container-site">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#A8BDAF] mb-4"
+            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#8EA4BA] mb-4"
           >
             About Rafaqat Babar & Co.
           </motion.p>
@@ -56,10 +56,10 @@ export default function AboutPage() {
       {/* Introduction */}
       <section className="container-site py-20">
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr] items-start">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#123C32] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0E2238] tracking-tight">
             A Legacy of Financial Integrity
           </h2>
-          <div className="space-y-6 text-[#68736E] text-base sm:text-lg leading-relaxed">
+          <div className="space-y-6 text-[#64748B] text-base sm:text-lg leading-relaxed">
             <p>
               Founded in 1986, Rafaqat Babar & Co. is a premier Chartered Accountancy firm registered with the Institute of Chartered Accountants of Pakistan (ICAP). Over the past four decades, we have evolved from a local auditing practice into a comprehensive financial services and corporate advisory firm.
             </p>
@@ -73,10 +73,10 @@ export default function AboutPage() {
       {/* Our Journey Timeline */}
       <section className="py-20 bg-white border-y border-black/5">
         <div className="container-site">
-          <h2 className="text-3xl font-bold text-[#123C32] tracking-tight mb-16">
+          <h2 className="text-3xl font-bold text-[#0E2238] tracking-tight mb-16">
             Our Journey
           </h2>
-          <div className="relative border-l-2 border-[#A8BDAF]/30 ml-4 md:ml-6 space-y-12">
+          <div className="relative border-l-2 border-[#8EA4BA]/30 ml-4 md:ml-6 space-y-12">
             {milestones.map((m, idx) => (
               <motion.div
                 key={m.year}
@@ -87,12 +87,12 @@ export default function AboutPage() {
                 className="relative pl-8 md:pl-10"
               >
                 {/* Timeline dot */}
-                <span className="absolute -left-[11px] top-1.5 flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#123C32] bg-[#F7F6F1]">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#B89B5E]" />
+                <span className="absolute -left-[11px] top-1.5 flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#0E2238] bg-[#F8FAFC]">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#C5A059]" />
                 </span>
-                <span className="text-lg font-bold text-[#B89B5E] block">{m.year}</span>
-                <h3 className="text-xl font-bold text-[#123C32] mt-1">{m.title}</h3>
-                <p className="mt-2 text-sm sm:text-base text-[#68736E] max-w-2xl leading-relaxed">
+                <span className="text-lg font-bold text-[#C5A059] block">{m.year}</span>
+                <h3 className="text-xl font-bold text-[#0E2238] mt-1">{m.title}</h3>
+                <p className="mt-2 text-sm sm:text-base text-[#64748B] max-w-2xl leading-relaxed">
                   {m.desc}
                 </p>
               </motion.div>
@@ -104,14 +104,14 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <section className="container-site py-20 grid gap-12 md:grid-cols-2">
         <div className="bg-white border border-black/5 rounded-3xl p-8 md:p-10 shadow-sm">
-          <h3 className="text-2xl font-bold text-[#123C32] mb-4">Our Mission</h3>
-          <p className="text-sm sm:text-base leading-relaxed text-[#68736E]">
+          <h3 className="text-2xl font-bold text-[#0E2238] mb-4">Our Mission</h3>
+          <p className="text-sm sm:text-base leading-relaxed text-[#64748B]">
             To empower organizations and decision-makers by delivering rigorous auditing compliance, proactive tax strategy, and insightful management advisory services. We resolve complexity, ensuring our clients operate with maximum confidence and transparency.
           </p>
         </div>
         <div className="bg-white border border-black/5 rounded-3xl p-8 md:p-10 shadow-sm">
-          <h3 className="text-2xl font-bold text-[#123C32] mb-4">Our Vision</h3>
-          <p className="text-sm sm:text-base leading-relaxed text-[#68736E]">
+          <h3 className="text-2xl font-bold text-[#0E2238] mb-4">Our Vision</h3>
+          <p className="text-sm sm:text-base leading-relaxed text-[#64748B]">
             To be recognized as the regional benchmark for accounting precision and advisory excellence. We seek to foster sustained, healthy corporate growth across Pakistan and cross-border regions, serving as the ultimate trusted partner in professional finance.
           </p>
         </div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
       {/* Core Values */}
       <section className="py-20 bg-white border-y border-black/5">
         <div className="container-site">
-          <h2 className="text-3xl font-bold text-[#123C32] tracking-tight mb-16 text-center">
+          <h2 className="text-3xl font-bold text-[#0E2238] tracking-tight mb-16 text-center">
             Our Core Values
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -128,12 +128,12 @@ export default function AboutPage() {
               const Icon = v.icon;
               return (
                 <div key={v.title} className="flex gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#F7F6F1] text-[#123C32]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#F8FAFC] text-[#0E2238]">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-[#123C32]">{v.title}</h3>
-                    <p className="mt-2 text-sm text-[#68736E] leading-relaxed">{v.desc}</p>
+                    <h3 className="text-lg font-bold text-[#0E2238]">{v.title}</h3>
+                    <p className="mt-2 text-sm text-[#64748B] leading-relaxed">{v.desc}</p>
                   </div>
                 </div>
               );
@@ -143,12 +143,12 @@ export default function AboutPage() {
       </section>
 
       {/* Sectors We Serve */}
-      <section className="py-20 bg-[#F7F6F1]">
+      <section className="py-20 bg-[#F8FAFC]">
         <div className="container-site">
-          <h2 className="text-3xl font-bold text-[#123C32] tracking-tight mb-4 text-center">
+          <h2 className="text-3xl font-bold text-[#0E2238] tracking-tight mb-4 text-center">
             Sectors We Serve
           </h2>
-          <p className="text-sm text-[#68736E] text-center max-w-xl mx-auto mb-16 leading-relaxed">
+          <p className="text-sm text-[#64748B] text-center max-w-xl mx-auto mb-16 leading-relaxed">
             Our firm delivers auditing compliance, strategic tax solutions, and advisory services across key regional industries.
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
@@ -162,11 +162,11 @@ export default function AboutPage() {
               const Icon = sector.icon;
               return (
                 <div key={sector.name} className="bg-white border border-black/5 rounded-[2rem] p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7F6F1] text-[#123C32] mb-5">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F8FAFC] text-[#0E2238] mb-5">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-base font-bold text-[#123C32] leading-tight">{sector.name}</h3>
-                  <p className="mt-2 text-xs text-[#68736E] leading-relaxed">{sector.desc}</p>
+                  <h3 className="text-base font-bold text-[#0E2238] leading-tight">{sector.name}</h3>
+                  <p className="mt-2 text-xs text-[#64748B] leading-relaxed">{sector.desc}</p>
                 </div>
               );
             })}
@@ -176,13 +176,13 @@ export default function AboutPage() {
 
       {/* Leadership */}
       <section className="container-site py-20">
-        <h2 className="text-3xl font-bold text-[#123C32] tracking-tight mb-16">
+        <h2 className="text-3xl font-bold text-[#0E2238] tracking-tight mb-16">
           Firm Leadership
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {leadership.map((lead) => (
             <div key={lead.name} className="group">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-black/5 bg-[#A8BDAF]/10">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-black/5 bg-[#8EA4BA]/10">
                 <Image
                   src={lead.img}
                   alt={lead.name}
@@ -192,8 +192,8 @@ export default function AboutPage() {
                 />
               </div>
               <div className="mt-6">
-                <h3 className="text-xl font-bold text-[#123C32]">{lead.name}</h3>
-                <p className="text-sm font-semibold text-[#B89B5E] mt-1">{lead.title}</p>
+                <h3 className="text-xl font-bold text-[#0E2238]">{lead.name}</h3>
+                <p className="text-sm font-semibold text-[#C5A059] mt-1">{lead.title}</p>
               </div>
             </div>
           ))}

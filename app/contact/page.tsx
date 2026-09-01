@@ -31,12 +31,12 @@ const officeInfo = [
 
 export default function ContactPage() {
   return (
-    <div className="bg-[#F7F6F1] min-h-screen pb-20">
+    <div className="bg-[#F8FAFC] min-h-screen pb-20">
 
       {/* Hero */}
-      <section className="py-20 md:py-28 border-b border-black/5 bg-[#123C32] text-white">
+      <section className="py-20 md:py-28 border-b border-black/5 bg-[#0E2238] text-white">
         <div className="container-site">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#A8BDAF] mb-4">
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#8EA4BA] mb-4">
             Get In Touch
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight max-w-3xl">
@@ -53,10 +53,10 @@ export default function ContactPage() {
 
         {/* Left — Form */}
         <div className="bg-white border border-black/5 rounded-[2rem] p-8 md:p-12 shadow-sm">
-          <h2 className="text-2xl font-bold text-[#123C32] tracking-tight mb-2">
+          <h2 className="text-2xl font-bold text-[#0E2238] tracking-tight mb-2">
             Send an Inquiry
           </h2>
-          <p className="text-sm text-[#68736E] mb-8 leading-relaxed">
+          <p className="text-sm text-[#64748B] mb-8 leading-relaxed">
             Fill out the form below and a member of our team will respond within one business day.
           </p>
           <ContactForm />
@@ -67,27 +67,27 @@ export default function ContactPage() {
 
           {/* Office Addresses */}
           <div className="bg-white border border-black/5 rounded-[2rem] p-8 shadow-sm">
-            <h2 className="text-lg font-bold text-[#123C32] tracking-tight mb-6">Our Offices</h2>
+            <h2 className="text-lg font-bold text-[#0E2238] tracking-tight mb-6">Our Offices</h2>
             <div className="space-y-6">
               {officeInfo.map((office, i) => (
                 <div key={office.city} className={i > 0 ? "pt-6 border-t border-black/5" : ""}>
-                  <p className="text-xs font-bold text-[#B89B5E] tracking-wider uppercase mb-3">
+                  <p className="text-xs font-bold text-[#C5A059] tracking-wider uppercase mb-3">
                     {office.city}
                   </p>
                   <div className="space-y-2">
-                    <div className="flex items-start gap-2.5 text-sm text-[#68736E]">
-                      <MapPin className="h-4 w-4 shrink-0 mt-0.5 text-[#A8BDAF]" />
+                    <div className="flex items-start gap-2.5 text-sm text-[#64748B]">
+                      <MapPin className="h-4 w-4 shrink-0 mt-0.5 text-[#8EA4BA]" />
                       <span>{office.address}</span>
                     </div>
-                    <div className="flex items-center gap-2.5 text-sm text-[#68736E]">
-                      <Phone className="h-4 w-4 shrink-0 text-[#A8BDAF]" />
-                      <a href={`tel:${office.phone.replace(/[\s-]/g, "")}`} className="hover:text-[#123C32] transition-colors">
+                    <div className="flex items-center gap-2.5 text-sm text-[#64748B]">
+                      <Phone className="h-4 w-4 shrink-0 text-[#8EA4BA]" />
+                      <a href={`tel:${office.phone.replace(/[\s-]/g, "")}`} className="hover:text-[#0E2238] transition-colors">
                         {office.phone}
                       </a>
                     </div>
-                    <div className="flex items-center gap-2.5 text-sm text-[#68736E]">
-                      <Mail className="h-4 w-4 shrink-0 text-[#A8BDAF]" />
-                      <a href={`mailto:${office.email}`} className="hover:text-[#123C32] transition-colors break-all">
+                    <div className="flex items-center gap-2.5 text-sm text-[#64748B]">
+                      <Mail className="h-4 w-4 shrink-0 text-[#8EA4BA]" />
+                      <a href={`mailto:${office.email}`} className="hover:text-[#0E2238] transition-colors break-all">
                         {office.email}
                       </a>
                     </div>
@@ -100,21 +100,21 @@ export default function ContactPage() {
           {/* Business Hours */}
           <div className="bg-white border border-black/5 rounded-[2rem] p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-5">
-              <Clock className="h-5 w-5 text-[#B89B5E]" />
-              <h3 className="text-base font-bold text-[#123C32]">Business Hours</h3>
+              <Clock className="h-5 w-5 text-[#C5A059]" />
+              <h3 className="text-base font-bold text-[#0E2238]">Business Hours</h3>
             </div>
-            <div className="space-y-2 text-sm text-[#68736E]">
+            <div className="space-y-2 text-sm text-[#64748B]">
               <div className="flex justify-between">
                 <span>Monday – Friday</span>
-                <span className="font-medium text-[#17201D]">9:00 AM – 5:30 PM</span>
+                <span className="font-medium text-[#0F172A]">9:00 AM – 5:30 PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Saturday</span>
-                <span className="font-medium text-[#17201D]">9:00 AM – 1:00 PM</span>
+                <span className="font-medium text-[#0F172A]">9:00 AM – 1:00 PM</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
-                <span className="font-medium text-[#68736E]">Closed</span>
+                <span className="font-medium text-[#64748B]">Closed</span>
               </div>
             </div>
           </div>

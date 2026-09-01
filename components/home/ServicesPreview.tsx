@@ -37,7 +37,7 @@ const services = [
 
 export default function ServicesPreview() {
   return (
-    <section className="py-24 md:py-32 bg-[#F7F6F1]">
+    <section className="py-24 md:py-32 bg-[#F8FAFC]">
       <div className="container-site">
         
         {/* Header */}
@@ -48,10 +48,10 @@ export default function ServicesPreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#2F6F5E]">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#1E3E62]">
               What We Do
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#123C32]">
+            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0E2238]">
               Financial expertise built<br />around your business.
             </h2>
           </motion.div>
@@ -63,7 +63,7 @@ export default function ServicesPreview() {
           >
             <Link
               href="/services"
-              className="group flex items-center gap-2 font-semibold text-[#123C32] hover:text-[#2F6F5E] transition-colors"
+              className="group flex items-center gap-2 font-semibold text-[#0E2238] hover:text-[#1E3E62] transition-colors"
             >
               <span>View All Services</span>
               <span className="transition-transform group-hover:translate-x-1.5 duration-200">
@@ -87,24 +87,24 @@ export default function ServicesPreview() {
               >
                 <Link
                   href={service.href}
-                  className="group relative block rounded-3xl border border-black/10 border-l-4 border-l-transparent bg-white p-8 md:p-10 shadow-sm transition-all duration-300 hover:border-l-[#B89B5E] hover:border-y-black/5 hover:border-r-black/5 hover:shadow-md hover:-translate-y-1"
+                  className="group relative block rounded-3xl border border-black/10 border-l-4 border-l-transparent bg-white p-8 md:p-10 shadow-sm transition-all duration-300 hover:border-l-[#C5A059] hover:border-y-black/5 hover:border-r-black/5 hover:shadow-md hover:-translate-y-1"
                 >
                   <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7F6F1] text-[#123C32] group-hover:bg-[#123C32] group-hover:text-white transition-all duration-300">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F8FAFC] text-[#0E2238] group-hover:bg-[#0E2238] group-hover:text-white transition-all duration-300">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <div className="rounded-full bg-[#F7F6F1] p-3 text-[#123C32] transition-colors group-hover:bg-[#123C32] group-hover:text-white">
+                    <div className="rounded-full bg-[#F8FAFC] p-3 text-[#0E2238] transition-colors group-hover:bg-[#0E2238] group-hover:text-white">
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                     </div>
                   </div>
                   <div className="mt-8">
-                    <span className="text-[10px] font-bold text-[#B89B5E] tracking-[0.2em] uppercase block mb-1">
+                    <span className="text-[10px] font-bold text-[#C5A059] tracking-[0.2em] uppercase block mb-1">
                       Service {service.num}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#123C32]">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#0E2238]">
                       {service.name}
                     </h3>
-                    <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#68736E]">
+                    <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#64748B]">
                       {service.description}
                     </p>
                   </div>

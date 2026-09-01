@@ -40,10 +40,10 @@ export default function InsightsPreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#2F6F5E]">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#1E3E62]">
               Insights
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#123C32]">
+            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0E2238]">
               Financial Perspective.
             </h2>
           </motion.div>
@@ -55,7 +55,7 @@ export default function InsightsPreview() {
           >
             <Link
               href="/insights"
-              className="group flex items-center gap-2 font-semibold text-[#123C32] hover:text-[#2F6F5E] transition-colors"
+              className="group flex items-center gap-2 font-semibold text-[#0E2238] hover:text-[#1E3E62] transition-colors"
             >
               <span>View All Insights</span>
               <span className="transition-transform group-hover:translate-x-1.5 duration-200">
@@ -74,24 +74,24 @@ export default function InsightsPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.1 }}
-              className="group flex flex-col justify-between rounded-3xl border border-black/10 bg-[#F7F6F1]/30 p-8 hover:border-[#123C32] hover:bg-white transition-all duration-300 shadow-sm"
+              className="group flex flex-col justify-between rounded-3xl border border-black/10 bg-[#F8FAFC]/50 p-8 hover:border-[#0E2238] hover:bg-white transition-all duration-300 shadow-sm"
             >
               <div>
-                <div className="flex items-center justify-between text-xs font-bold text-[#2F6F5E] tracking-wider uppercase mb-5">
+                <div className="flex items-center justify-between text-xs font-bold text-[#1E3E62] tracking-wider uppercase mb-5">
                   <span>{art.category}</span>
-                  <span className="text-[#68736E] font-medium">{art.date}</span>
+                  <span className="text-[#64748B] font-medium">{art.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#123C32] leading-tight tracking-tight group-hover:text-[#2F6F5E] transition-colors">
+                <h3 className="text-xl font-bold text-[#0E2238] leading-tight tracking-tight group-hover:text-[#1E3E62] transition-colors">
                   {art.title}
                 </h3>
-                <p className="mt-4 text-sm leading-relaxed text-[#68736E]">
+                <p className="mt-4 text-sm leading-relaxed text-[#64748B]">
                   {art.summary}
                 </p>
               </div>
               <div className="mt-8 pt-4 border-t border-black/5">
                 <Link
                   href={art.href}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#123C32] group-hover:text-[#2F6F5E] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0E2238] group-hover:text-[#1E3E62] transition-colors"
                 >
                   <span>Read Article</span>
                   <span className="transition-transform group-hover:translate-x-1 duration-200">→</span>

@@ -50,15 +50,15 @@ const team = [
 
 export default function TeamPage() {
   return (
-    <div className="bg-[#F7F6F1] min-h-screen pb-20">
+    <div className="bg-[#F8FAFC] min-h-screen pb-20">
       
       {/* Hero */}
-      <section className="py-20 md:py-28 border-b border-black/5 bg-[#123C32] text-white">
+      <section className="py-20 md:py-28 border-b border-black/5 bg-[#0E2238] text-white">
         <div className="container-site">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#A8BDAF] mb-4"
+            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#8EA4BA] mb-4"
           >
             Our Experts
           </motion.p>
@@ -87,7 +87,7 @@ export default function TeamPage() {
             >
               <div>
                 {/* Image */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-black/5 bg-[#A8BDAF]/10">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-black/5 bg-[#8EA4BA]/10">
                   <Image
                     src={member.img}
                     alt={member.name}
@@ -99,16 +99,16 @@ export default function TeamPage() {
 
                 {/* Details */}
                 <div className="mt-6">
-                  <span className="text-xs font-bold text-[#B89B5E] tracking-wider uppercase">
+                  <span className="text-xs font-bold text-[#C5A059] tracking-wider uppercase">
                     {member.role}
                   </span>
-                  <h2 className="mt-2 text-2xl font-bold text-[#123C32] tracking-tight">
+                  <h2 className="mt-2 text-2xl font-bold text-[#0E2238] tracking-tight">
                     {member.name}
                   </h2>
-                  <p className="text-sm font-semibold text-[#2F6F5E] mt-1">
+                  <p className="text-sm font-semibold text-[#1E3E62] mt-1">
                     {member.specialty}
                   </p>
-                  <p className="mt-4 text-sm text-[#68736E] leading-relaxed">
+                  <p className="mt-4 text-sm text-[#64748B] leading-relaxed">
                     {member.bio}
                   </p>
                 </div>
@@ -118,7 +118,7 @@ export default function TeamPage() {
               <div className="mt-8 pt-6 border-t border-black/5 flex items-center gap-4">
                 <a
                   href={`mailto:${member.email}`}
-                  className="rounded-full bg-[#F7F6F1] p-3 text-[#123C32] hover:bg-[#123C32] hover:text-white transition-colors"
+                  className="rounded-full bg-[#F8FAFC] p-3 text-[#0E2238] hover:bg-[#0E2238] hover:text-white transition-colors"
                   title={`Email ${member.name}`}
                 >
                   <Mail className="h-4.5 w-4.5" />
@@ -127,7 +127,7 @@ export default function TeamPage() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full bg-[#F7F6F1] p-3 text-[#123C32] hover:bg-[#123C32] hover:text-white transition-colors"
+                  className="rounded-full bg-[#F8FAFC] p-3 text-[#0E2238] hover:bg-[#0E2238] hover:text-white transition-colors"
                   title={`LinkedIn profile`}
                 >
                   <LinkedInIcon className="h-[18px] w-[18px]" />

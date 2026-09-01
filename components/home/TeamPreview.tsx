@@ -27,7 +27,7 @@ const team = [
 
 export default function TeamPreview() {
   return (
-    <section className="py-24 md:py-32 bg-[#F7F6F1] border-b border-black/5">
+    <section className="py-24 md:py-32 bg-[#F8FAFC] border-b border-black/5">
       <div className="container-site">
         
         {/* Header */}
@@ -38,10 +38,10 @@ export default function TeamPreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#2F6F5E]">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#1E3E62]">
               Our Leadership
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#123C32]">
+            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0E2238]">
               People Behind the Expertise.
             </h2>
           </motion.div>
@@ -53,7 +53,7 @@ export default function TeamPreview() {
           >
             <Link
               href="/team"
-              className="group flex items-center gap-2 font-semibold text-[#123C32] hover:text-[#2F6F5E] transition-colors"
+              className="group flex items-center gap-2 font-semibold text-[#0E2238] hover:text-[#1E3E62] transition-colors"
             >
               <span>Meet Our Team</span>
               <span className="transition-transform group-hover:translate-x-1.5 duration-200">
@@ -75,7 +75,7 @@ export default function TeamPreview() {
               className="group flex flex-col"
             >
               {/* Image Container with Hover Scale */}
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-black/5 bg-[#A8BDAF]/10 shadow-sm transition-all duration-300 group-hover:shadow-md">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-black/5 bg-[#8EA4BA]/10 shadow-sm transition-all duration-300 group-hover:shadow-md">
                 <Image
                   src={member.img}
                   alt={member.name}
@@ -87,13 +87,13 @@ export default function TeamPreview() {
 
               {/* Professional Text Info */}
               <div className="mt-6">
-                <p className="text-xs font-bold text-[#B89B5E] tracking-wider uppercase">
+                <p className="text-xs font-bold text-[#C5A059] tracking-wider uppercase">
                   {member.role}
                 </p>
-                <h3 className="mt-2 text-xl font-bold text-[#123C32] tracking-tight group-hover:text-[#2F6F5E] transition-colors">
+                <h3 className="mt-2 text-xl font-bold text-[#0E2238] tracking-tight group-hover:text-[#1E3E62] transition-colors">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-sm text-[#68736E]">
+                <p className="mt-1 text-sm text-[#64748B]">
                   {member.specialty}
                 </p>
               </div>

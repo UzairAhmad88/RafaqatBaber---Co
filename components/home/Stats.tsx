@@ -34,7 +34,7 @@ function CountUp({ start = 0, end, suffix = "", duration = 1.5 }: { start?: numb
   }, [isInView, start, end, duration]);
 
   return (
-    <span ref={ref} className="font-bold text-[#B89B5E]">
+    <span ref={ref} className="font-bold text-[#C5A059]">
       {count}
       {suffix}
     </span>
@@ -67,13 +67,13 @@ export default function Stats() {
   ];
 
   return (
-    <section className="bg-[#123C32] py-24 text-white overflow-hidden relative border-y border-white/5">
+    <section className="bg-[#0E2238] py-24 text-white overflow-hidden relative border-y border-white/5">
       {/* Subtle lines background inside statistics */}
       <div className="absolute right-0 top-0 h-full w-1/3 opacity-12 pointer-events-none">
         <svg className="h-full w-full" viewBox="0 0 100 100" fill="none">
-          <line x1="10" y1="0" x2="90" y2="100" stroke="white" strokeWidth="1" />
-          <line x1="30" y1="0" x2="110" y2="100" stroke="white" strokeWidth="1" />
-          <line x1="50" y1="0" x2="130" y2="100" stroke="white" strokeWidth="1" />
+          <line x1="10" y1="0" x2="90" y2="100" stroke="#C5A059" strokeWidth="1" />
+          <line x1="30" y1="0" x2="110" y2="100" stroke="#8EA4BA" strokeWidth="1" />
+          <line x1="50" y1="0" x2="130" y2="100" stroke="#C5A059" strokeWidth="1" />
         </svg>
       </div>
 
@@ -90,11 +90,11 @@ export default function Stats() {
             <div className="text-5xl md:text-6xl tracking-tight">
               <CountUp start={stat.start} end={stat.num} suffix={stat.suffix} />
             </div>
-            <div className="h-px w-8 bg-[#A8BDAF] opacity-30 my-1" />
-            <p className="text-sm font-semibold tracking-[0.15em] uppercase text-[#A8BDAF]">
+            <div className="h-px w-8 bg-[#8EA4BA] opacity-30 my-1" />
+            <p className="text-sm font-semibold tracking-[0.15em] uppercase text-[#8EA4BA]">
               {stat.label}
             </p>
-            <p className="text-xs text-[#A8BDAF]/70 leading-normal max-w-[240px]">
+            <p className="text-xs text-[#8EA4BA]/70 leading-normal max-w-[240px]">
               {stat.desc}
             </p>
           </motion.div>
