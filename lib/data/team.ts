@@ -2,30 +2,18 @@ import type { TeamMember } from "@/types";
 
 /**
  * Centralized team data for Rafaqat Babar & Co.
- * Official client-supplied partners & directors.
+ * Order is strictly specified:
+ * Partners:
+ *   1. MR. SAIFULLAH, FCA
+ *   2. MR. AMER JAVED AHMAD, FCA
+ *   3. MR. SHUJA-UL-MULK, FCA
+ *   4. MR. NASAR KHAN, ACA
+ * Directors:
+ *   1. MR. FAHAD AMIN
+ *   2. MR. YAWAR MUHAMMAD, ACA
  */
 export const teamMembers: TeamMember[] = [
   // ── Partners ──────────────────────────────────────────────
-  {
-    slug: "shuja-ul-mulk",
-    name: "MR. SHUJA-UL-MULK, FCA",
-    category: "partner",
-    role: "Partner",
-    email: "shuja@rafaqatbabar.com",
-    image: "/images/shuja-ul-mulk.jpeg",
-    bio: "",
-    qualifications: ["FCA"],
-  },
-  {
-    slug: "nasar-khan",
-    name: "MR. NASAR KHAN, ACA",
-    category: "partner",
-    role: "Partner",
-    email: "nasir.khan@rafaqatbabar.com",
-    image: "/images/nasar-khan.jpeg",
-    bio: "",
-    qualifications: ["ACA"],
-  },
   {
     slug: "saifullah",
     name: "MR. SAIFULLAH, FCA",
@@ -45,6 +33,26 @@ export const teamMembers: TeamMember[] = [
     image: "/images/amer-javed-ahmad.jpeg",
     bio: "",
     qualifications: ["FCA"],
+  },
+  {
+    slug: "shuja-ul-mulk",
+    name: "MR. SHUJA-UL-MULK, FCA",
+    category: "partner",
+    role: "Partner",
+    email: "shuja@rafaqatbabar.com",
+    image: "/images/shuja-ul-mulk.jpeg",
+    bio: "",
+    qualifications: ["FCA"],
+  },
+  {
+    slug: "nasar-khan",
+    name: "MR. NASAR KHAN, ACA",
+    category: "partner",
+    role: "Partner",
+    email: "nasir.khan@rafaqatbabar.com",
+    image: "/images/nasar-khan.jpeg",
+    bio: "",
+    qualifications: ["ACA"],
   },
 
   // ── Directors ─────────────────────────────────────────────
@@ -71,9 +79,9 @@ export const teamMembers: TeamMember[] = [
 ];
 
 /** Fallback image for team members without a photo */
-export const TEAM_PLACEHOLDER_IMAGE = "/images/shuja-ul-mulk.jpeg";
+export const TEAM_PLACEHOLDER_IMAGE = "/images/saifullah.jpeg";
 
-/** Get team members filtered by category */
+/** Get team members filtered by category - preserves array sequence */
 export function getTeamByCategory(category: TeamMember["category"]) {
   return teamMembers.filter((m) => m.category === category);
 }

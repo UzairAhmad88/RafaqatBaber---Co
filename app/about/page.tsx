@@ -115,9 +115,6 @@ const sectors = [
 
 export default function AboutPage() {
   const partners = teamMembers.filter((m) => m.category === "partner");
-  const formerPartners = teamMembers.filter((m) => m.category === "former-partner");
-  const directors = teamMembers.filter((m) => m.category === "director");
-  const staffTeam = teamMembers.filter((m) => m.category === "team");
 
   return (
     <div className="bg-[#F8FAFC] min-h-screen">
@@ -226,7 +223,7 @@ export default function AboutPage() {
               return (
                 <div key={v.title} className="flex gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#00335B]/5 text-[#00335B]">
-                    <Icon className="h-6 w-6" />
+                    <Icon className="h-6 w-6 text-[#00A7CE]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-[#00335B]">{v.title}</h3>
@@ -257,7 +254,7 @@ export default function AboutPage() {
                   className="bg-white border border-black/5 rounded-[2rem] p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#00335B]/5 text-[#00335B] mb-5">
-                    <Icon className="h-6 w-6" />
+                    <Icon className="h-6 w-6 text-[#00A7CE]" />
                   </div>
                   <h3 className="text-base font-bold text-[#00335B] leading-tight">
                     {sector.name}
@@ -270,160 +267,76 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team / Leadership Section */}
+      {/* Leadership Preview Section */}
       <section className="container-site py-20 border-t border-black/5">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00A7CE] mb-2">
-              Leadership & Professionals
+              Leadership & Partners
             </p>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#00335B] tracking-tight">
-              Our Team
+              Firm Leadership
             </h2>
           </div>
           <Link
-            href="/team"
+            href="/about/team"
             className="mt-4 md:mt-0 inline-flex items-center gap-2 text-sm font-semibold text-[#00335B] hover:text-[#00A7CE] transition-colors"
           >
-            View all team members <ArrowRight className="h-4 w-4" />
+            <span>View all partners &amp; directors</span>
+            <ArrowRight className="h-4 w-4 text-[#00A7CE]" />
           </Link>
         </div>
 
-        {/* Partners */}
-        <div className="mb-16">
-          <h3 className="text-xl font-display font-bold text-[#00335B] mb-8 border-b border-black/5 pb-3">
-            Partners
-          </h3>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {partners.map((lead) => (
-              <div
-                key={lead.slug}
-                className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between"
-              >
-                <div>
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-black/5 bg-[#00335B]/5">
-                    <Image
-                      src={lead.image || TEAM_PLACEHOLDER_IMAGE}
-                      alt={`${lead.name}, ${lead.role}`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
-                    />
-                  </div>
-                  <div className="mt-5">
-                    <span className="text-xs font-bold text-[#00A7CE] uppercase tracking-wider">
-                      {lead.role}
-                    </span>
-                    <h4 className="text-lg font-display font-bold text-[#00335B] mt-1 leading-snug">
-                      {lead.name}
-                    </h4>
-                  </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {partners.map((lead) => (
+            <div
+              key={lead.slug}
+              className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between"
+            >
+              <div>
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-black/5 bg-[#00335B]/5">
+                  <Image
+                    src={lead.image || TEAM_PLACEHOLDER_IMAGE}
+                    alt={`${lead.name}, ${lead.role}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                  />
                 </div>
-                {lead.email && (
-                  <div className="mt-4 pt-4 border-t border-black/5">
-                    <a
-                      href={`mailto:${lead.email}`}
-                      className="inline-flex items-center gap-2 text-xs text-[#00335B] hover:text-[#00A7CE] transition-colors break-all"
-                      title={`Email ${lead.name}`}
-                    >
-                      <Mail className="h-3.5 w-3.5 shrink-0 text-[#00A7CE]" />
-                      <span>{lead.email}</span>
-                    </a>
-                  </div>
-                )}
+                <div className="mt-5">
+                  <span className="text-xs font-bold text-[#00A7CE] uppercase tracking-wider">
+                    {lead.role}
+                  </span>
+                  <h3 className="text-lg font-display font-bold text-[#00335B] mt-1 leading-snug">
+                    {lead.name}
+                  </h3>
+                </div>
               </div>
-            ))}
-          </div>
+              {lead.email && (
+                <div className="mt-4 pt-4 border-t border-black/5">
+                  <a
+                    href={`mailto:${lead.email}`}
+                    className="inline-flex items-center gap-2 text-xs text-[#00335B] hover:text-[#00A7CE] transition-colors break-all"
+                    title={`Email ${lead.name}`}
+                  >
+                    <Mail className="h-3.5 w-3.5 shrink-0 text-[#00A7CE]" />
+                    <span>{lead.email}</span>
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
-        {/* Directors */}
-        {directors.length > 0 && (
-          <div className="mb-16">
-            <h3 className="text-xl font-display font-bold text-[#00335B] mb-8 border-b border-black/5 pb-3">
-              Directors
-            </h3>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {directors.map((lead) => (
-                <div
-                  key={lead.slug}
-                  className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-black/5 bg-[#00335B]/5">
-                      <Image
-                        src={lead.image || TEAM_PLACEHOLDER_IMAGE}
-                        alt={`${lead.name}, ${lead.role}`}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
-                      />
-                    </div>
-                    <div className="mt-5">
-                      <span className="text-xs font-bold text-[#00A7CE] uppercase tracking-wider">
-                        {lead.role}
-                      </span>
-                      <h4 className="text-lg font-display font-bold text-[#00335B] mt-1 leading-snug">
-                        {lead.name}
-                      </h4>
-                    </div>
-                  </div>
-                  {lead.email && (
-                    <div className="mt-4 pt-4 border-t border-black/5">
-                      <a
-                        href={`mailto:${lead.email}`}
-                        className="inline-flex items-center gap-2 text-xs text-[#00335B] hover:text-[#00A7CE] transition-colors break-all"
-                        title={`Email ${lead.name}`}
-                      >
-                        <Mail className="h-3.5 w-3.5 shrink-0 text-[#00A7CE]" />
-                        <span>{lead.email}</span>
-                      </a>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Former Partners (if any) */}
-        {formerPartners.length > 0 && (
-          <div className="mb-12">
-            <h3 className="text-xl font-display font-bold text-[#00335B] mb-6 border-b border-black/5 pb-2">
-              Former Partners
-            </h3>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {formerPartners.map((member) => (
-                <div
-                  key={member.slug}
-                  className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm"
-                >
-                  <h4 className="text-lg font-display font-bold text-[#00335B]">{member.name}</h4>
-                  <p className="text-xs text-[#64748B] mt-1">{member.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Staff Team Members (if any) */}
-        {staffTeam.length > 0 && (
-          <div>
-            <h3 className="text-xl font-display font-bold text-[#00335B] mb-6 border-b border-black/5 pb-2">
-              Team
-            </h3>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {staffTeam.map((member) => (
-                <div
-                  key={member.slug}
-                  className="bg-white rounded-2xl border border-black/5 p-4 shadow-sm"
-                >
-                  <h4 className="text-base font-display font-bold text-[#00335B]">{member.name}</h4>
-                  <p className="text-xs text-[#64748B] mt-1">{member.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        <div className="mt-10 text-center">
+          <Link
+            href="/about/team"
+            className="inline-flex items-center gap-2 rounded-full border border-[#00335B]/20 bg-white px-8 py-3.5 text-sm font-semibold text-[#00335B] hover:bg-[#00335B] hover:text-white transition-colors shadow-sm"
+          >
+            <span>Explore Complete Team &amp; Directors</span>
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </section>
 
       {/* Our Locations Section (with #locations anchor) */}
