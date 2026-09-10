@@ -40,10 +40,11 @@ export default function Header() {
             : "bg-transparent py-6"
         }`}
       >
-        <div className="container-site flex items-center justify-between">
+        <div className="container-site relative flex items-center justify-between">
+          {/* Logo on the left */}
           <Link
             href="/"
-            className={`text-xl font-bold font-display tracking-tight transition-colors ${
+            className={`text-xl font-bold font-display tracking-tight transition-colors z-10 ${
               isDarkHeroOverlay
                 ? "text-white hover:text-[#00A7CE]"
                 : "text-[#00335B] hover:text-[#00A7CE]"
@@ -52,8 +53,8 @@ export default function Header() {
             Rafaqat Babar & Co.
           </Link>
 
-          {/* Desktop Navigation & Contact Us Button grouped inline */}
-          <div className="hidden items-center gap-8 md:flex">
+          {/* Desktop Navigation & Contact Us Button centered in the header */}
+          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
             <nav className="flex items-center gap-8 text-sm font-medium">
               {navLinks.map((link) => {
                 const isActive =
@@ -63,7 +64,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative py-1 transition-colors ${
+                    className={`relative py-1 transition-colors whitespace-nowrap ${
                       isDarkHeroOverlay
                         ? isActive
                           ? "text-white font-semibold"
@@ -84,7 +85,7 @@ export default function Header() {
 
             <Link
               href="/contact"
-              className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 shadow-sm ${
+              className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 shadow-sm whitespace-nowrap ${
                 isDarkHeroOverlay
                   ? "bg-white text-[#00335B] hover:bg-[#F8FAFC] hover:shadow-md"
                   : "bg-[#00335B] text-white hover:bg-[#002240] hover:shadow-md"
