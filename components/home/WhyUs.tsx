@@ -13,7 +13,7 @@ const principles = [
   },
   {
     title: "Insight",
-    description: "Turning dry numbers and regulatory text into useful, practical business understanding.",
+    description: "Turning complex numbers and regulatory text into actionable business intelligence.",
   },
   {
     title: "Partnership",
@@ -25,7 +25,6 @@ export default function WhyUs() {
   return (
     <section className="bg-white py-24 md:py-32 border-b border-black/5">
       <div className="container-site">
-        
         {/* Section Heading */}
         <div className="max-w-3xl mb-20">
           <motion.div
@@ -34,11 +33,13 @@ export default function WhyUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#1E3E62]">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#00A7CE]">
               Our Core Philosophy
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0E2238] leading-tight">
-              Built on Professionalism.<br />Driven by Insight.
+            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-[#00335B] leading-tight">
+              Built on Professionalism.
+              <br />
+              Driven by Insight.
             </h2>
           </motion.div>
         </div>
@@ -55,8 +56,8 @@ export default function WhyUs() {
               className="grid py-8 md:py-12 gap-6 md:grid-cols-[1fr_2fr] items-baseline"
             >
               <div className="flex items-center gap-3">
-                <span className="text-xs text-[#C5A059] font-mono">0{idx + 1}</span>
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#0E2238] tracking-tight">
+                <span className="text-xs text-[#00A7CE] font-mono">0{idx + 1}</span>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold text-[#00335B] tracking-tight">
                   {p.title}
                 </h3>
               </div>
@@ -66,7 +67,6 @@ export default function WhyUs() {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

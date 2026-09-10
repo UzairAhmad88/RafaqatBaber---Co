@@ -1,143 +1,254 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "motion/react";
-import { Mail } from "lucide-react";
-
-
-function LinkedInIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-    </svg>
-  );
-}
-
-const team = [
-  {
-    name: "Rafaqat Babar",
-    role: "Founding Partner",
-    specialty: "Audit & Assurance Practice",
-    bio: "Founding partner with over 40 years of audit practice. Under his leadership, the firm has obtained its audit license in 1986 and built trust across major sectors in Pakistan.",
-    img: "/images/partner1.jpg",
-    email: "rafaqat.babar@rafaqatbabar.com",
-    linkedin: "https://linkedin.com",
-  },
-  {
-    name: "Farhan Babar",
-    role: "Partner",
-    specialty: "Taxation & Regulatory Affairs",
-    bio: "Specializes in corporate taxation compliance, tax planning, and representation before local appellate forums. Leads compliance filings for multi-sector corporate clients.",
-    img: "/images/partner2.jpg",
-    email: "farhan.babar@rafaqatbabar.com",
-    linkedin: "https://linkedin.com",
-  },
-  {
-    name: "Ayesha Rahman",
-    role: "Head of Advisory",
-    specialty: "Corporate Strategy & Transactions",
-    bio: "Brings extensive international experience in transaction advisory, financial feasibility modeling, and corporate restructuring audits. Leads the management consulting division.",
-    img: "/images/partner3.jpg",
-    email: "ayesha.rahman@rafaqatbabar.com",
-    linkedin: "https://linkedin.com",
-  },
-];
+import { Mail, ArrowRight } from "lucide-react";
+import { teamMembers, TEAM_PLACEHOLDER_IMAGE } from "@/lib/data/team";
 
 export default function TeamPage() {
+  const partners = teamMembers.filter((m) => m.category === "partner");
+  const formerPartners = teamMembers.filter((m) => m.category === "former-partner");
+  const directors = teamMembers.filter((m) => m.category === "director");
+  const staffTeam = teamMembers.filter((m) => m.category === "team");
+
   return (
     <div className="bg-[#F8FAFC] min-h-screen pb-20">
-      
       {/* Hero */}
-      <section className="py-20 md:py-28 border-b border-black/5 bg-[#0E2238] text-white">
+      <section className="py-20 md:py-28 border-b border-black/5 bg-[#00335B] text-white">
         <div className="container-site">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#8EA4BA] mb-4"
+            className="text-xs font-semibold tracking-[0.25em] uppercase text-[#00A7CE] mb-4"
           >
-            Our Experts
+            Our Leadership & Professionals
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight max-w-3xl"
+            className="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight max-w-3xl"
           >
             People Behind the Expertise.
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-6 text-lg text-slate-200 max-w-2xl leading-relaxed"
+          >
+            Meet our partners and practice directors providing audit, assurance, taxation, and management consulting services.
+          </motion.p>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="container-site py-20">
-        <div className="grid gap-12 lg:grid-cols-3 md:grid-cols-2">
-          {team.map((member, idx) => (
-            <motion.div
-              key={member.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-white rounded-[2.5rem] border border-black/5 p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              <div>
-                {/* Image */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-black/5 bg-[#8EA4BA]/10">
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
-                  />
+      {/* Team Content */}
+      <div className="container-site py-20 space-y-20">
+        {/* Partners */}
+        <section>
+          <div className="mb-10">
+            <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#00335B] tracking-tight">
+              Partners
+            </h2>
+            <p className="mt-2 text-sm text-[#64748B]">
+              The firm&apos;s equity leadership and practice partners.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {partners.map((member, idx) => (
+              <motion.div
+                key={member.slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-white rounded-3xl border border-black/5 p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div>
+                  {/* Image */}
+                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-black/5 bg-[#00335B]/5">
+                    <Image
+                      src={member.image || TEAM_PLACEHOLDER_IMAGE}
+                      alt={`${member.name}, ${member.role}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
+                    />
+                  </div>
+
+                  {/* Details */}
+                  <div className="mt-5">
+                    <span className="text-xs font-bold text-[#00A7CE] tracking-wider uppercase">
+                      {member.role}
+                    </span>
+                    <h3 className="mt-1.5 text-lg font-display font-bold text-[#00335B] tracking-tight leading-snug">
+                      {member.name}
+                    </h3>
+                  </div>
                 </div>
 
-                {/* Details */}
-                <div className="mt-6">
-                  <span className="text-xs font-bold text-[#C5A059] tracking-wider uppercase">
-                    {member.role}
-                  </span>
-                  <h2 className="mt-2 text-2xl font-bold text-[#0E2238] tracking-tight">
+                {/* Contact */}
+                {member.email && (
+                  <div className="mt-5 pt-4 border-t border-black/5">
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="inline-flex items-center gap-2 text-xs text-[#00335B] hover:text-[#00A7CE] transition-colors break-all"
+                      title={`Email ${member.name}`}
+                    >
+                      <Mail className="h-3.5 w-3.5 shrink-0 text-[#00A7CE]" />
+                      <span>{member.email}</span>
+                    </a>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Directors */}
+        {directors.length > 0 && (
+          <section>
+            <div className="mb-10">
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#00335B] tracking-tight">
+                Directors
+              </h2>
+              <p className="mt-2 text-sm text-[#64748B]">
+                Practice directors leading advisory and taxation engagements.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {directors.map((member, idx) => (
+                <motion.div
+                  key={member.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="bg-white rounded-3xl border border-black/5 p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div>
+                    {/* Image */}
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-black/5 bg-[#00335B]/5">
+                      <Image
+                        src={member.image || TEAM_PLACEHOLDER_IMAGE}
+                        alt={`${member.name}, ${member.role}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
+                      />
+                    </div>
+
+                    {/* Details */}
+                    <div className="mt-5">
+                      <span className="text-xs font-bold text-[#00A7CE] tracking-wider uppercase">
+                        {member.role}
+                      </span>
+                      <h3 className="mt-1.5 text-lg font-display font-bold text-[#00335B] tracking-tight leading-snug">
+                        {member.name}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Contact */}
+                  {member.email && (
+                    <div className="mt-5 pt-4 border-t border-black/5">
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="inline-flex items-center gap-2 text-xs text-[#00335B] hover:text-[#00A7CE] transition-colors break-all"
+                        title={`Email ${member.name}`}
+                      >
+                        <Mail className="h-3.5 w-3.5 shrink-0 text-[#00A7CE]" />
+                        <span>{member.email}</span>
+                      </a>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Former Partners (if any) */}
+        {formerPartners.length > 0 && (
+          <section>
+            <div className="mb-10">
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#00335B] tracking-tight">
+                Former Partners
+              </h2>
+              <p className="mt-2 text-sm text-[#64748B]">
+                Partners who contributed significantly to the firm&apos;s growth and standing.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {formerPartners.map((member) => (
+                <div
+                  key={member.slug}
+                  className="bg-white rounded-3xl border border-black/5 p-6 shadow-sm"
+                >
+                  <h3 className="text-lg font-display font-bold text-[#00335B]">
                     {member.name}
-                  </h2>
-                  <p className="text-sm font-semibold text-[#1E3E62] mt-1">
-                    {member.specialty}
-                  </p>
-                  <p className="mt-4 text-sm text-[#64748B] leading-relaxed">
-                    {member.bio}
+                  </h3>
+                  <p className="text-xs font-semibold text-[#00A7CE] uppercase mt-1">
+                    {member.role}
                   </p>
                 </div>
-              </div>
+              ))}
+            </div>
+          </section>
+        )}
 
-              {/* Contact Icons */}
-              <div className="mt-8 pt-6 border-t border-black/5 flex items-center gap-4">
-                <a
-                  href={`mailto:${member.email}`}
-                  className="rounded-full bg-[#F8FAFC] p-3 text-[#0E2238] hover:bg-[#0E2238] hover:text-white transition-colors"
-                  title={`Email ${member.name}`}
-                >
-                  <Mail className="h-4.5 w-4.5" />
-                </a>
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#F8FAFC] p-3 text-[#0E2238] hover:bg-[#0E2238] hover:text-white transition-colors"
-                  title={`LinkedIn profile`}
-                >
-                  <LinkedInIcon className="h-[18px] w-[18px]" />
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+        {/* Team Members (if any) */}
+        {staffTeam.length > 0 && (
+          <section>
+            <div className="mb-10">
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#00335B] tracking-tight">
+                Team
+              </h2>
+              <p className="mt-2 text-sm text-[#64748B]">
+                Our dedicated managers, senior auditors, and accounting professionals.
+              </p>
+            </div>
 
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {staffTeam.map((member) => (
+                <div
+                  key={member.slug}
+                  className="bg-white rounded-2xl border border-black/5 p-6 shadow-sm"
+                >
+                  <h3 className="text-base font-display font-bold text-[#00335B]">
+                    {member.name}
+                  </h3>
+                  <p className="text-xs font-semibold text-[#00A7CE] uppercase mt-1">
+                    {member.role}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Bottom CTA */}
+        <section className="rounded-3xl bg-[#00335B] p-10 md:p-12 text-white text-center">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold">
+            Looking to Join Our Team or Consult an Expert?
+          </h2>
+          <p className="mt-3 text-sm text-slate-200 max-w-xl mx-auto leading-relaxed">
+            Reach out to our partners for specialized audit, tax advisory, or corporate consulting services across our offices.
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#00335B] hover:bg-[#F8FAFC] transition-colors shadow-sm"
+            >
+              Contact Our Firm <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

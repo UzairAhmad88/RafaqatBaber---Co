@@ -29,16 +29,16 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-32 lg:py-40 min-h-[90vh] flex items-center bg-[#0E2238] text-white">
-      {/* Soft Ambient Radial Light Gradients (No Video) */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,62,98,0.45),rgba(14,34,56,1))]" />
+    <section className="relative overflow-hidden py-24 md:py-32 lg:py-40 min-h-[90vh] flex items-center bg-[#00335B] text-white">
+      {/* Soft Ambient Radial Light Gradients */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,167,206,0.15),rgba(0,51,91,1))]" />
       
       {/* Soft Floating Ambient Light Orbs */}
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#1E3E62]/35 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#0A4A7A]/35 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#C5A059]/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.08] z-[2]">
+      <div className="absolute inset-0 pointer-events-none opacity-[0.06] z-[2]">
         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -69,10 +69,10 @@ export default function Hero() {
           
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7.5xl font-bold tracking-tight text-white leading-[1.1] mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6"
           >
             Clarity in Numbers.<br />
-            <span className="display-font font-normal text-[#C5A059] italic">
+            <span className="font-normal text-[#C5A059]">
               Confidence in Decisions.
             </span>
           </motion.h1>
@@ -98,7 +98,7 @@ export default function Hero() {
               href="/contact"
               className="rounded-full border border-white/20 bg-white/10 backdrop-blur-md px-8 py-4 text-sm font-semibold text-white hover:bg-white/20 transition-all duration-300 shadow-sm hover:scale-105"
             >
-              Talk to an Advisor
+              Contact Us
             </Link>
           </motion.div>
         </motion.div>

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Manrope, DM_Serif_Display } from "next/font/google";
+import { Inter, Manrope, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import PageTransition from "@/components/layout/PageTransition";
 import NextTopLoader from "nextjs-toploader";
 import ScrollToTop from "@/components/layout/ScrollToTop";
@@ -20,10 +19,10 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const dmSerif = DM_Serif_Display({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-dm-serif",
-  weight: "400",
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -43,7 +42,8 @@ export const metadata: Metadata = {
     "Rafaqat Babar",
     "accounting firm Islamabad",
     "financial advisory Pakistan",
-    "corporate tax planning"
+    "corporate tax planning",
+    "corporate campaign advisory"
   ],
   openGraph: {
     type: "website",
@@ -68,11 +68,11 @@ const jsonLd = {
       "logo": "https://rafaqatbabar.com/icons/logo.png",
       "foundingDate": "1986",
       "description": "ICAP-registered Chartered Accountancy firm providing audit, taxation, advisory and accounting services.",
-      "telephone": "+92-91-5277107",
+      "telephone": "+92-91-5703151",
       "email": "info@rafaqatbabar.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Phase V, Hayatabad",
+        "streetAddress": "First Floor, Aman Center, Near Custom House, Main University Road",
         "addressLocality": "Peshawar",
         "addressRegion": "KPK",
         "addressCountry": "PK"
@@ -85,7 +85,8 @@ const jsonLd = {
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit & Assurance" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Taxation & Compliance" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Advisory Services" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Accounting & Business Support" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Accounting & Business Support" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Campaign" } }
         ]
       },
       "sameAs": ["https://linkedin.com"]
@@ -93,11 +94,11 @@ const jsonLd = {
     {
       "@type": "LocalBusiness",
       "name": "Rafaqat Babar & Co. — Peshawar",
-      "telephone": "+92-91-5277107",
+      "telephone": "+92-91-5703151",
       "email": "info@rafaqatbabar.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Phase V, Hayatabad",
+        "streetAddress": "First Floor, Aman Center, Near Custom House, Main University Road",
         "addressLocality": "Peshawar",
         "addressRegion": "KPK",
         "addressCountry": "PK"
@@ -112,7 +113,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable} ${dmSerif.variable}`}>
+    <html lang="en" className={`${inter.variable} ${manrope.variable} ${poppins.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -120,17 +121,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body>
-        <NextTopLoader color="#B89B5E" height={3} showSpinner={false} />
+        <NextTopLoader color="#C5A059" height={3} showSpinner={false} />
         <Header />
         <main>
           <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
-        <WhatsAppButton />
         <ScrollToTop />
       </body>
     </html>
   );
 }
-
-

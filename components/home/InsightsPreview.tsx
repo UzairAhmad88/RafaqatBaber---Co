@@ -31,7 +31,6 @@ export default function InsightsPreview() {
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="container-site">
-        
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <motion.div
@@ -40,10 +39,10 @@ export default function InsightsPreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#1E3E62]">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#00A7CE]">
               Insights
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0E2238]">
+            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-[#00335B]">
               Financial Perspective.
             </h2>
           </motion.div>
@@ -55,10 +54,10 @@ export default function InsightsPreview() {
           >
             <Link
               href="/insights"
-              className="group flex items-center gap-2 font-semibold text-[#0E2238] hover:text-[#1E3E62] transition-colors"
+              className="group flex items-center gap-2 font-semibold text-[#00335B] hover:text-[#00A7CE] transition-colors"
             >
               <span>View All Insights</span>
-              <span className="transition-transform group-hover:translate-x-1.5 duration-200">
+              <span className="transition-transform group-hover:translate-x-1.5 duration-200 text-[#00A7CE]">
                 →
               </span>
             </Link>
@@ -74,14 +73,14 @@ export default function InsightsPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.1 }}
-              className="group flex flex-col justify-between rounded-3xl border border-black/10 bg-[#F8FAFC]/50 p-8 hover:border-[#0E2238] hover:bg-white transition-all duration-300 shadow-sm"
+              className="group flex flex-col justify-between rounded-3xl border border-black/10 bg-[#F8FAFC]/50 p-8 hover:border-[#00335B] hover:bg-white transition-all duration-300 shadow-sm"
             >
               <div>
-                <div className="flex items-center justify-between text-xs font-bold text-[#1E3E62] tracking-wider uppercase mb-5">
-                  <span>{art.category}</span>
+                <div className="flex items-center justify-between text-xs font-bold text-[#00335B] tracking-wider uppercase mb-5">
+                  <span className="text-[#00A7CE]">{art.category}</span>
                   <span className="text-[#64748B] font-medium">{art.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#0E2238] leading-tight tracking-tight group-hover:text-[#1E3E62] transition-colors">
+                <h3 className="text-xl font-display font-bold text-[#00335B] leading-tight tracking-tight group-hover:text-[#00A7CE] transition-colors">
                   {art.title}
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-[#64748B]">
@@ -91,16 +90,17 @@ export default function InsightsPreview() {
               <div className="mt-8 pt-4 border-t border-black/5">
                 <Link
                   href={art.href}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0E2238] group-hover:text-[#1E3E62] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#00335B] group-hover:text-[#00A7CE] transition-colors"
                 >
                   <span>Read Article</span>
-                  <span className="transition-transform group-hover:translate-x-1 duration-200">→</span>
+                  <span className="transition-transform group-hover:translate-x-1 duration-200 text-[#00A7CE]">
+                    →
+                  </span>
                 </Link>
               </div>
             </motion.article>
           ))}
         </div>
-
       </div>
     </section>
   );

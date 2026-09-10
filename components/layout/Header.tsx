@@ -24,12 +24,9 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Team", href: "/team" },
     { name: "Insights", href: "/insights" },
-    { name: "Locations", href: "/locations" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -40,17 +37,17 @@ export default function Header() {
       <header
         className={`fixed left-0 right-0 top-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "border-b border-black/5 bg-[#F7F6F1]/90 shadow-sm backdrop-blur-md py-4"
+            ? "border-b border-black/5 bg-[#F8FAFC]/90 shadow-sm backdrop-blur-md py-4"
             : "bg-transparent py-6"
         }`}
       >
         <div className="container-site flex items-center justify-between">
           <Link
             href="/"
-            className={`text-xl font-bold tracking-tight transition-colors ${
+            className={`text-xl font-bold font-display tracking-tight transition-colors ${
               isDarkHeroOverlay
-                ? "text-white hover:text-[#C5A059]"
-                : "text-[#0E2238] hover:text-[#1E3E62]"
+                ? "text-white hover:text-[#00A7CE]"
+                : "text-[#00335B] hover:text-[#00A7CE]"
             }`}
           >
             Rafaqat Babar & Co.
@@ -69,16 +66,16 @@ export default function Header() {
                   className={`relative py-1 transition-colors ${
                     isDarkHeroOverlay
                       ? isActive
-                        ? "text-white"
-                        : "text-white/70 hover:text-white"
+                        ? "text-white font-semibold"
+                        : "text-white/80 hover:text-white"
                       : isActive
-                        ? "text-[#0E2238]"
-                        : "text-[#64748B] hover:text-[#0E2238]"
+                        ? "text-[#00335B] font-semibold"
+                        : "text-[#64748B] hover:text-[#00335B]"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 h-0.5 w-full bg-[#C5A059]" />
+                    <span className="absolute bottom-0 left-0 h-0.5 w-full bg-[#00A7CE]" />
                   )}
                 </Link>
               );
@@ -91,11 +88,11 @@ export default function Header() {
               href="/contact"
               className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 shadow-sm ${
                 isDarkHeroOverlay
-                  ? "bg-white text-[#0E2238] hover:bg-[#F8FAFC]"
-                  : "bg-[#0E2238] text-white hover:bg-[#1E3E62]"
+                  ? "bg-white text-[#00335B] hover:bg-[#F8FAFC] hover:shadow-md"
+                  : "bg-[#00335B] text-white hover:bg-[#002240] hover:shadow-md"
               }`}
             >
-              Talk to an Advisor
+              Contact Us
             </Link>
           </div>
 
@@ -105,8 +102,8 @@ export default function Header() {
               href="/contact"
               className={`rounded-full px-4 py-2 text-xs font-semibold transition-colors ${
                 isDarkHeroOverlay
-                  ? "bg-white text-[#0E2238] hover:bg-[#F8FAFC]"
-                  : "bg-[#0E2238] text-white hover:bg-[#1E3E62]"
+                  ? "bg-white text-[#00335B] hover:bg-[#F8FAFC]"
+                  : "bg-[#00335B] text-white hover:bg-[#002240]"
               }`}
             >
               Contact
@@ -116,7 +113,7 @@ export default function Header() {
               className={`rounded-full p-2 transition-colors ${
                 isDarkHeroOverlay
                   ? "text-white hover:bg-white/10"
-                  : "text-[#17201D] hover:bg-black/5"
+                  : "text-[#00335B] hover:bg-black/5"
               }`}
               aria-label="Open navigation menu"
             >

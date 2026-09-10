@@ -13,7 +13,7 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative rounded-[2.5rem] bg-[#0E2238] px-8 py-16 text-white md:px-16 md:py-20 shadow-xl overflow-hidden"
+          className="relative rounded-[2.5rem] bg-[#00335B] px-8 py-16 text-white md:px-16 md:py-20 shadow-xl overflow-hidden"
         >
           {/* Subtle Abstract Lines */}
           <div className="absolute inset-0 pointer-events-none opacity-10">
@@ -37,16 +37,16 @@ export default function FinalCTA() {
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="group flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#0E2238] hover:bg-[#F8FAFC] transition-all duration-200 shadow-sm"
+                className="group flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#00335B] hover:bg-[#F8FAFC] transition-all duration-200 shadow-sm"
               >
-                <span>Talk to an Advisor</span>
+                <span>Contact Us</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/contact"
+                href="/services"
                 className="rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10 hover:border-white/30 transition-all duration-200"
               >
-                Contact Us
+                Explore Services
               </Link>
             </div>
           </div>

@@ -71,7 +71,7 @@ export default function InsightsClient() {
               whileTap={{ scale: 0.95 }}
               className={`rounded-full px-5 py-2 text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 selectedCat === cat
-                  ? "bg-[#0E2238] text-white shadow-sm"
+                  ? "bg-[#00335B] text-white shadow-sm"
                   : "bg-white border border-black/5 text-[#64748B] hover:bg-black/5"
               }`}
             >
@@ -93,15 +93,15 @@ export default function InsightsClient() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
                 key={art.title}
-                className={`group flex flex-col justify-between rounded-[2rem] border border-black/5 bg-white p-8 shadow-sm hover:border-[#0E2238] hover:shadow-md hover:-translate-y-1 transition-all duration-300 ${
+                className={`group flex flex-col justify-between rounded-[2rem] border border-black/5 bg-white p-8 shadow-sm hover:border-[#00335B] hover:shadow-md hover:-translate-y-1 transition-all duration-300 ${
                   idx === 0 && selectedCat === "All"
-                    ? "md:col-span-2 lg:col-span-3 bg-gradient-to-br from-[#0E2238]/5 via-white to-white"
+                    ? "md:col-span-2 lg:col-span-3 bg-gradient-to-br from-[#00335B]/5 via-white to-white"
                     : ""
                 }`}
               >
                 <div>
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold text-[#1E3E62] tracking-wider uppercase mb-5">
-                    <span className="rounded-full bg-[#F8FAFC] px-3 py-1 text-[10px] text-[#0E2238] font-semibold border border-black/5">
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold text-[#00335B] tracking-wider uppercase mb-5">
+                    <span className="rounded-full bg-[#F8FAFC] px-3 py-1 text-[10px] text-[#00335B] font-semibold border border-black/5">
                       {art.category}
                     </span>
                     <div className="flex items-center gap-2 text-[#64748B] font-medium">
@@ -110,22 +110,28 @@ export default function InsightsClient() {
                       <span>{art.readTime}</span>
                     </div>
                   </div>
-                  <h2 className={`font-bold text-[#0E2238] leading-tight tracking-tight group-hover:text-[#1E3E62] transition-colors ${
-                    idx === 0 && selectedCat === "All" ? "text-2xl sm:text-3xl max-w-4xl" : "text-xl"
-                  }`}>
+                  <h2
+                    className={`font-display font-bold text-[#00335B] leading-tight tracking-tight group-hover:text-[#00A7CE] transition-colors ${
+                      idx === 0 && selectedCat === "All"
+                        ? "text-2xl sm:text-3xl max-w-4xl"
+                        : "text-xl"
+                    }`}
+                  >
                     {art.title}
                   </h2>
-                  <p className={`mt-4 text-sm leading-relaxed text-[#64748B] ${
-                    idx === 0 && selectedCat === "All" ? "max-w-4xl" : ""
-                  }`}>
+                  <p
+                    className={`mt-4 text-sm leading-relaxed text-[#64748B] ${
+                      idx === 0 && selectedCat === "All" ? "max-w-4xl" : ""
+                    }`}
+                  >
                     {art.summary}
                   </p>
                 </div>
                 <div className="mt-8 pt-4 border-t border-black/5 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0E2238]">
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#00335B] group-hover:text-[#00A7CE] transition-colors">
                     Read Article
                   </span>
-                  <div className="rounded-full bg-[#F8FAFC] p-2 text-[#0E2238] group-hover:bg-[#0E2238] group-hover:text-white transition-colors duration-300">
+                  <div className="rounded-full bg-[#F8FAFC] p-2 text-[#00335B] group-hover:bg-[#00335B] group-hover:text-white transition-colors duration-300">
                     <ArrowUpRight className="h-4 w-4" />
                   </div>
                 </div>

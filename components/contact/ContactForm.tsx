@@ -23,6 +23,7 @@ const services = [
   "Taxation & Compliance",
   "Advisory Services",
   "Accounting & Business Support",
+  "Corporate Campaign",
   "General Inquiry",
 ];
 
@@ -47,16 +48,16 @@ function InputField({
 }) {
   return (
     <div className="space-y-1.5">
-      <label className="block text-xs font-bold text-[#0F172A] tracking-wider uppercase">
-        {label} {required && <span className="text-[#C5A059]">*</span>}
+      <label className="block text-xs font-bold text-[#00335B] tracking-wider uppercase">
+        {label} {required && <span className="text-[#00A7CE]">*</span>}
       </label>
       <div className="relative">
-        <Icon className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#8EA4BA] pointer-events-none" />
+        <Icon className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#00A7CE]/60 pointer-events-none" />
         <input
           type={type}
           placeholder={placeholder}
           {...register(name)}
-          className={`w-full rounded-2xl border bg-white pl-11 pr-4 py-3.5 text-sm text-[#0F172A] placeholder:text-[#8EA4BA] outline-none transition-all duration-200 focus:ring-2 focus:ring-[#1E3E62]/30 focus:border-[#1E3E62] ${
+          className={`w-full rounded-2xl border bg-white pl-11 pr-4 py-3.5 text-sm text-[#00335B] placeholder:text-slate-400 outline-none transition-all duration-200 focus:ring-2 focus:ring-[#00A7CE]/30 focus:border-[#00A7CE] ${
             error ? "border-red-400" : "border-black/10 hover:border-black/20"
           }`}
         />
@@ -105,16 +106,16 @@ export default function ContactForm() {
           animate={{ opacity: 1, scale: 1 }}
           className="flex flex-col items-center justify-center py-16 text-center"
         >
-          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#0E2238]/10 mb-6">
-            <CheckCircle className="h-10 w-10 text-[#0E2238]" />
+          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#00335B]/10 mb-6">
+            <CheckCircle className="h-10 w-10 text-[#00335B]" />
           </div>
-          <h3 className="text-2xl font-bold text-[#0E2238]">Inquiry Sent</h3>
+          <h3 className="text-2xl font-display font-bold text-[#00335B]">Inquiry Sent</h3>
           <p className="mt-3 text-sm text-[#64748B] leading-relaxed max-w-sm">
             Thank you for reaching out. A member of our team will review your inquiry and respond within one business day.
           </p>
           <button
             onClick={() => setIsSubmitted(false)}
-            className="mt-8 rounded-full border border-black/10 px-6 py-2.5 text-sm font-semibold text-[#0F172A] hover:bg-black/5 transition-colors"
+            className="mt-8 rounded-full border border-black/10 px-6 py-2.5 text-sm font-semibold text-[#00335B] hover:bg-black/5 transition-colors"
           >
             Send Another Inquiry
           </button>
@@ -171,15 +172,15 @@ export default function ContactForm() {
 
           {/* Service Select */}
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold text-[#0F172A] tracking-wider uppercase">
-              Service Required <span className="text-[#C5A059]">*</span>
+            <label className="block text-xs font-bold text-[#00335B] tracking-wider uppercase">
+              Service Required <span className="text-[#00A7CE]">*</span>
             </label>
             <div className="relative">
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#8EA4BA] pointer-events-none" />
+              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#00A7CE]/60 pointer-events-none" />
               <select
                 {...register("service")}
                 defaultValue=""
-                className={`w-full appearance-none rounded-2xl border bg-white px-4 py-3.5 text-sm text-[#0F172A] outline-none transition-all duration-200 focus:ring-2 focus:ring-[#1E3E62]/30 focus:border-[#1E3E62] ${
+                className={`w-full appearance-none rounded-2xl border bg-white px-4 py-3.5 text-sm text-[#00335B] outline-none transition-all duration-200 focus:ring-2 focus:ring-[#00A7CE]/30 focus:border-[#00A7CE] ${
                   errors.service ? "border-red-400" : "border-black/10 hover:border-black/20"
                 }`}
               >
@@ -196,16 +197,16 @@ export default function ContactForm() {
 
           {/* Message */}
           <div className="space-y-1.5">
-            <label className="block text-xs font-bold text-[#0F172A] tracking-wider uppercase">
-              Message <span className="text-[#C5A059]">*</span>
+            <label className="block text-xs font-bold text-[#00335B] tracking-wider uppercase">
+              Message <span className="text-[#00A7CE]">*</span>
             </label>
             <div className="relative">
-              <MessageSquare className="absolute left-4 top-4 h-4 w-4 text-[#8EA4BA] pointer-events-none" />
+              <MessageSquare className="absolute left-4 top-4 h-4 w-4 text-[#00A7CE]/60 pointer-events-none" />
               <textarea
                 {...register("message")}
                 rows={5}
                 placeholder="Briefly describe your requirements or the nature of your inquiry…"
-                className={`w-full rounded-2xl border bg-white pl-11 pr-4 py-3.5 text-sm text-[#0F172A] placeholder:text-[#8EA4BA] outline-none transition-all duration-200 focus:ring-2 focus:ring-[#1E3E62]/30 focus:border-[#1E3E62] resize-none ${
+                className={`w-full rounded-2xl border bg-white pl-11 pr-4 py-3.5 text-sm text-[#00335B] placeholder:text-slate-400 outline-none transition-all duration-200 focus:ring-2 focus:ring-[#00A7CE]/30 focus:border-[#00A7CE] resize-none ${
                   errors.message ? "border-red-400" : "border-black/10 hover:border-black/20"
                 }`}
               />
@@ -218,7 +219,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isLoading}
-            className="group flex w-full items-center justify-center gap-2.5 rounded-full bg-[#0E2238] px-8 py-4 text-sm font-semibold text-white hover:bg-[#1E3E62] transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
+            className="group flex w-full items-center justify-center gap-2.5 rounded-full bg-[#00335B] px-8 py-4 text-sm font-semibold text-white hover:bg-[#002240] transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {isLoading ? (
               <span className="flex items-center gap-2">

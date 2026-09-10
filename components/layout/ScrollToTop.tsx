@@ -25,7 +25,7 @@ export default function ScrollToTop() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-24 right-6 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-[#0E2238] text-white shadow-lg hover:bg-[#1E3E62] transition-colors cursor-pointer md:h-12 md:w-12"
+          className="fixed bottom-8 right-6 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-[#00335B] text-white shadow-lg hover:bg-[#002240] transition-colors cursor-pointer md:h-12 md:w-12 border border-white/10"
           aria-label="Scroll to top"
         >
           <ArrowUp className="h-5 w-5" />
