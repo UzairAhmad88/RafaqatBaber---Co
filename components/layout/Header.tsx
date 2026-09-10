@@ -52,37 +52,36 @@ export default function Header() {
             Rafaqat Babar & Co.
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
-            {navLinks.map((link) => {
-              const isActive =
-                pathname === link.href ||
-                (link.href !== "/" && pathname?.startsWith(link.href));
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`relative py-1 transition-colors ${
-                    isDarkHeroOverlay
-                      ? isActive
-                        ? "text-white font-semibold"
-                        : "text-white/80 hover:text-white"
-                      : isActive
-                        ? "text-[#00335B] font-semibold"
-                        : "text-[#64748B] hover:text-[#00335B]"
-                  }`}
-                >
-                  {link.name}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 h-0.5 w-full bg-[#00A7CE]" />
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
+          {/* Desktop Navigation & Contact Us Button grouped inline */}
+          <div className="hidden items-center gap-8 md:flex">
+            <nav className="flex items-center gap-8 text-sm font-medium">
+              {navLinks.map((link) => {
+                const isActive =
+                  pathname === link.href ||
+                  (link.href !== "/" && pathname?.startsWith(link.href));
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`relative py-1 transition-colors ${
+                      isDarkHeroOverlay
+                        ? isActive
+                          ? "text-white font-semibold"
+                          : "text-white/80 hover:text-white"
+                        : isActive
+                          ? "text-[#00335B] font-semibold"
+                          : "text-[#64748B] hover:text-[#00335B]"
+                    }`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-0 h-0.5 w-full bg-[#00A7CE]" />
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden items-center md:flex">
             <Link
               href="/contact"
               className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 shadow-sm ${
