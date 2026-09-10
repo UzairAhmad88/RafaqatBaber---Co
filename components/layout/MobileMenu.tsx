@@ -13,7 +13,6 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Insights", href: "/insights" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {

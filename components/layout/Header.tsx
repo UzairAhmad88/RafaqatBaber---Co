@@ -27,7 +27,6 @@ export default function Header() {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Insights", href: "/insights" },
-    { name: "Contact", href: "/contact" },
   ];
 
   const isDarkHeroOverlay = pathname === "/" && !isScrolled;
@@ -106,7 +105,7 @@ export default function Header() {
                   : "bg-[#00335B] text-white hover:bg-[#002240]"
               }`}
             >
-              Contact
+              Contact Us
             </Link>
             <button
               onClick={() => setIsMenuOpen(true)}
