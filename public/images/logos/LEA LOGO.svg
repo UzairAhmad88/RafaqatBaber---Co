@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" fill="none">
+  <!-- LEA Global Symbol -->
+  <g transform="translate(4, 8)">
+    <circle cx="24" cy="24" r="20" stroke="#123C32" stroke-width="2.5" stroke-dasharray="4 2.5"/>
+    <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#B89B5E" stroke-width="2" transform="rotate(-25 24 24)"/>
+    <circle cx="24" cy="24" r="4" fill="#123C32"/>
+  </g>
+  <!-- Text Brandmark -->
+  <text x="58" y="29" font-family="Manrope, Inter, sans-serif" font-weight="800" font-size="16" fill="#123C32" letter-spacing="0.05em">LEA Global</text>
+  <text x="58" y="44" font-family="Inter, sans-serif" font-weight="600" font-size="8.5" fill="#68736E" letter-spacing="0.14em">LEADING EDGE ALLIANCE</text>
+</svg>

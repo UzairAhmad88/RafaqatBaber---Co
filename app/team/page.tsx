@@ -22,7 +22,7 @@ export default function TeamPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-xs font-semibold tracking-[0.25em] uppercase text-[#00A7CE] mb-4"
           >
-            Our Leadership & Professionals
+            Our Leadership &amp; Professionals
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,6 @@ export default function TeamPage() {
             </p>
           </div>
 
-          {/* 4 columns on desktop in 1 row */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {partners.map((member, idx) => (
               <motion.div
@@ -68,7 +67,6 @@ export default function TeamPage() {
                 className="bg-white rounded-3xl border border-black/5 p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow"
               >
                 <div>
-                  {/* Image */}
                   <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-black/5 bg-[#00335B]/5">
                     <Image
                       src={member.image || TEAM_PLACEHOLDER_IMAGE}
@@ -79,7 +77,6 @@ export default function TeamPage() {
                     />
                   </div>
 
-                  {/* Details */}
                   <div className="mt-5">
                     <span className="text-xs font-bold text-[#00A7CE] tracking-wider uppercase">
                       {member.role}
@@ -90,7 +87,6 @@ export default function TeamPage() {
                   </div>
                 </div>
 
-                {/* Contact */}
                 {member.email && (
                   <div className="mt-5 pt-4 border-t border-black/5">
                     <a
@@ -120,7 +116,6 @@ export default function TeamPage() {
               </p>
             </div>
 
-            {/* Clean 2-column layout for the 2 directors */}
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl">
               {directors.map((member, idx) => (
                 <motion.div
@@ -132,7 +127,6 @@ export default function TeamPage() {
                   className="bg-white rounded-3xl border border-black/5 p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div>
-                    {/* Image */}
                     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-black/5 bg-[#00335B]/5">
                       <Image
                         src={member.image || TEAM_PLACEHOLDER_IMAGE}
@@ -143,7 +137,6 @@ export default function TeamPage() {
                       />
                     </div>
 
-                    {/* Details */}
                     <div className="mt-5">
                       <span className="text-xs font-bold text-[#00A7CE] tracking-wider uppercase">
                         {member.role}
@@ -154,7 +147,6 @@ export default function TeamPage() {
                     </div>
                   </div>
 
-                  {/* Contact */}
                   {member.email && (
                     <div className="mt-5 pt-4 border-t border-black/5">
                       <a
@@ -244,7 +236,7 @@ export default function TeamPage() {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#00335B] hover:bg-[#F8FAFC] transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 rounded-full bg-[#FFFFFF] px-8 py-3.5 text-sm font-semibold text-[#00335B] hover:bg-[#F8FAFC] transition-colors shadow-sm"
             >
               Contact Our Firm <ArrowRight className="h-4 w-4" />
             </Link>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <!-- RBCO Crest Emblem -->
+  <g transform="translate(4, 4)">
+    <rect x="0" y="0" width="56" height="56" rx="14" fill="#123C32"/>
+    <path d="M16 16H34C38.4183 16 42 19.5817 42 24C42 27.2764 40.0306 30.0921 37.1951 31.3126L43 40H35.5L30.5 32.5H24V40H16V16Z" fill="#B89B5E"/>
+    <path d="M24 22.5H33C33.8284 22.5 34.5 23.1716 34.5 24C34.5 24.8284 33.8284 25.5 33 25.5H24V22.5Z" fill="#123C32"/>
+    <circle cx="40" cy="16" r="3" fill="#A8BDAF"/>
+  </g>
+  <!-- Text Brandmark -->
+  <text x="72" y="30" font-family="Manrope, Inter, sans-serif" font-weight="800" font-size="18" fill="#123C32" letter-spacing="0.04em">RAFAQAT BABAR &amp; CO.</text>
+  <text x="72" y="46" font-family="Inter, sans-serif" font-weight="600" font-size="9.5" fill="#B89B5E" letter-spacing="0.22em">CHARTERED ACCOUNTANTS</text>
+</svg>
