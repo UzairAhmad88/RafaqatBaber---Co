@@ -53,6 +53,13 @@ export const metadata: Metadata = {
     description:
       "Trusted audit, taxation, advisory and accounting services. ICAP-registered. Serving Pakistan and the region since 1986.",
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   robots: { index: true, follow: true },
 };
 
