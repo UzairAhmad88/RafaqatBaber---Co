@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/taxation-compliance",
     "/services/advisory",
     "/services/accounting-business-support",
-    "/services/corporate-campaign",
+    "/services/corporate-compliance",
     "/team",
     "/insights",
     "/locations/peshawar",

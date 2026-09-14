@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, ShieldCheck, Calculator, TrendingUp, BookOpen, Megaphone } from "lucide-react";
+import { ArrowRight, ShieldCheck, Calculator, TrendingUp, BookOpen, Building2 } from "lucide-react";
 
 const services = [
   {
@@ -35,10 +35,10 @@ const services = [
   },
   {
     num: "05",
-    name: "Corporate Campaign",
-    description: "Strategic stakeholder engagement, corporate disclosures, and regulatory compliance roadmaps.",
-    href: "/services/corporate-campaign",
-    icon: Megaphone,
+    name: "Corporate Compliance",
+    description: "Company incorporation, SECP statutory filings, board secretarial support, and corporate governance frameworks.",
+    href: "/services/corporate-compliance",
+    icon: Building2,
   },
 ];
 

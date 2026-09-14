@@ -32,7 +32,7 @@ export default function ServicesPage() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-lg text-slate-200 max-w-2xl leading-relaxed"
           >
-            From statutory auditing and proactive tax strategy to corporate advisory and strategic campaigns, our practice areas provide complete financial confidence.
+            From statutory auditing and proactive tax strategy to corporate advisory and corporate compliance, our practice areas provide complete financial confidence.
           </motion.p>
         </div>
       </section>

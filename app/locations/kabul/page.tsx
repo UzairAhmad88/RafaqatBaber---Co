@@ -9,7 +9,7 @@ const services = [
   "Taxation Advisory",
   "International Business Advisory",
   "Development Sector Accounting",
-  "Corporate Campaign",
+  "Corporate Compliance",
   "Cross-Border Compliance",
 ];
 

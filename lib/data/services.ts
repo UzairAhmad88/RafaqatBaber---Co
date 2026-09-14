@@ -4,7 +4,7 @@ import {
   Calculator,
   TrendingUp,
   BookOpen,
-  Megaphone,
+  Building2,
 } from "lucide-react";
 
 /**
@@ -74,18 +74,18 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
-    title: "Corporate Campaign",
-    slug: "corporate-campaign",
-    href: "/services/corporate-campaign",
+    title: "Corporate Compliance",
+    slug: "corporate-compliance",
+    href: "/services/corporate-compliance",
     description:
-      "Strategic corporate campaign advisory to help organisations plan, structure, and execute impactful corporate initiatives.",
+      "Comprehensive corporate compliance, SECP statutory filings, board secretarial services, and governance advisory to ensure full regulatory adherence.",
     subservices: [
-      "Campaign strategy & planning",
-      "Stakeholder engagement advisory",
-      "Corporate communications support",
-      "Regulatory & compliance alignment",
-      "Impact measurement & reporting",
-      "Post-campaign evaluation",
+      "Company incorporation & registration",
+      "SECP statutory filings & compliance",
+      "Corporate governance advisory",
+      "Board & shareholder secretarial support",
+      "Regulatory licensing & compliance alignment",
+      "Corporate restructuring & capital alteration",
     ],
   },
 ];
@@ -99,5 +99,5 @@ export const serviceIcons = {
   "taxation-compliance": Calculator,
   advisory: TrendingUp,
   "accounting-business-support": BookOpen,
-  "corporate-campaign": Megaphone,
+  "corporate-compliance": Building2,
 } as const;

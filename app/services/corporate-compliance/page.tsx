@@ -2,45 +2,45 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Check, Megaphone, TrendingUp, Mail, ArrowLeft, Target, ShieldCheck, FileCheck } from "lucide-react";
+import { Check, Building2, TrendingUp, Mail, ArrowLeft } from "lucide-react";
 
 const provisions = [
-  "Strategic corporate communication audits and regulatory reporting campaigns.",
-  "Corporate governance restructuring and stakeholder alignment frameworks.",
-  "ESG disclosure consulting and statutory transparency campaigns.",
-  "Annual report positioning and shareholder communication alignment.",
-  "Public and private entity compliance roadmaps for statutory milestones.",
+  "Company incorporation, registration, and SECP statutory filings.",
+  "Corporate governance frameworks, board secretarial support, and statutory record maintenance.",
+  "Regulatory compliance roadmaps for statutory licensing and corporate approvals.",
+  "Ultimate Beneficial Ownership (UBO) declaration and corporate register maintenance.",
+  "Corporate restructuring, joint ventures, and capital alteration statutory filings.",
 ];
 
 const steps = [
   {
     step: "01",
-    name: "Assessment & Scoping",
-    desc: "Review existing corporate disclosures, shareholder communications, and regulatory compliance requirements.",
+    name: "Compliance Audit & Review",
+    desc: "Review existing corporate registers, SECP filings, statutory records, and regulatory compliance status.",
   },
   {
     step: "02",
-    name: "Campaign Architecture",
-    desc: "Formulate strategic milestones, compliance documentation packages, and transparency deliverables.",
+    name: "Governance Architecture",
+    desc: "Formulate corporate secretarial milestones, board resolutions, and filing packages.",
   },
   {
     step: "03",
-    name: "Execution & Filing",
-    desc: "Coordinate statutory submissions, stakeholder briefs, and regulatory alignment with oversight authorities.",
+    name: "Statutory Execution & Filings",
+    desc: "Coordinate and submit statutory forms, annual returns, and corporate declarations with SECP and regulatory bodies.",
   },
   {
     step: "04",
-    name: "Stakeholder Engagement",
-    desc: "Facilitate transparent disclosures for institutional investors, regulatory bodies, and internal governance boards.",
+    name: "Register & Minute Maintenance",
+    desc: "Maintain statutory registers, minute books, and corporate governance documentation.",
   },
   {
     step: "05",
-    name: "Review & Assurance",
-    desc: "Audit campaign impact, verify regulatory compliance records, and prepare ongoing advisory roadmaps.",
+    name: "Ongoing Advisory & Assurance",
+    desc: "Conduct periodic compliance reviews, monitor regulatory changes, and provide continuous secretarial advisory.",
   },
 ];
 
-export default function CorporateCampaignPage() {
+export default function CorporateCompliancePage() {
   return (
     <div className="bg-[#F8FAFC] min-h-screen pb-20">
       {/* Hero */}
@@ -62,10 +62,10 @@ export default function CorporateCampaignPage() {
               Services / Overview
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight">
-              Corporate Campaign
+              Corporate Compliance
             </h1>
             <p className="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
-              Strategic stakeholder engagement, regulatory compliance campaigns, and institutional alignment designed to elevate corporate credibility.
+              Comprehensive corporate compliance, SECP statutory filings, board secretarial services, and governance advisory to ensure seamless regulatory adherence.
             </p>
           </motion.div>
         </div>
@@ -78,7 +78,7 @@ export default function CorporateCampaignPage() {
           {/* What We Provide */}
           <div className="bg-white border border-black/5 rounded-[2rem] p-8 md:p-10 shadow-sm">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#00335B] tracking-tight flex items-center gap-3">
-              <Megaphone className="h-6 w-6 text-[#00A7CE]" />
+              <Building2 className="h-6 w-6 text-[#00A7CE]" />
               <span>What We Provide</span>
             </h2>
             <ul className="mt-8 space-y-4">
@@ -131,17 +131,17 @@ export default function CorporateCampaignPage() {
               <span>Why It Matters</span>
             </h3>
             <p className="mt-4 text-sm text-slate-200 leading-relaxed">
-              Effective corporate positioning and transparent compliance reporting establish institutional confidence among banks, regulatory agencies, and investors, safeguarding corporate reputation.
+              Full corporate compliance and robust secretarial governance protect corporate officers, prevent statutory penalties, and preserve institutional confidence among stakeholders and regulatory bodies.
             </p>
           </div>
 
           {/* Contact Box */}
           <div className="bg-white border border-black/5 rounded-[2rem] p-8 shadow-sm text-center">
             <h3 className="text-lg font-display font-bold text-[#00335B]">
-              Discuss Corporate Campaign Needs
+              Discuss Corporate Compliance Needs
             </h3>
             <p className="mt-2 text-sm text-[#64748B] leading-relaxed">
-              Plan your corporate disclosure campaigns and stakeholder strategies with our senior advisory team.
+              Plan your corporate compliance, SECP filings, and governance strategies with our senior advisory team.
             </p>
             <Link
               href="/contact"

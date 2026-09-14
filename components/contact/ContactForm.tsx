@@ -23,7 +23,7 @@ const services = [
   "Taxation & Compliance",
   "Advisory Services",
   "Accounting & Business Support",
-  "Corporate Campaign",
+  "Corporate Compliance",
   "General Inquiry",
 ];
 

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     "accounting firm Islamabad",
     "financial advisory Pakistan",
     "corporate tax planning",
-    "corporate campaign advisory"
+    "corporate compliance advisory"
   ],
   openGraph: {
     type: "website",
@@ -86,7 +86,7 @@ const jsonLd = {
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Taxation & Compliance" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Advisory Services" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Accounting & Business Support" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Campaign" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Compliance" } }
         ]
       },
       "sameAs": ["https://linkedin.com"]
