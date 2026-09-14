@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" fill="none">
   <!-- LEA Global Symbol -->
   <g transform="translate(4, 8)">
-    <circle cx="24" cy="24" r="20" stroke="#00335B" stroke-width="2.5" stroke-dasharray="4 2.5" fill="none"/>
+    <circle cx="24" cy="24" r="20" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="4 2.5" fill="none"/>
     <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#C5A059" stroke-width="2" fill="none" transform="rotate(-25 24 24)"/>
-    <circle cx="24" cy="24" r="4" fill="#00335B"/>
+    <circle cx="24" cy="24" r="4" fill="#C5A059"/>
   </g>
   <!-- Text Brandmark -->
-  <text x="58" y="29" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="16" fill="#00335B" letter-spacing="0.5">LEA Global</text>
+  <text x="58" y="29" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="0.5">LEA Global</text>
   <text x="58" y="44" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="8.5" fill="#C5A059" letter-spacing="1.5">LEADING EDGE ALLIANCE</text>
 </svg>

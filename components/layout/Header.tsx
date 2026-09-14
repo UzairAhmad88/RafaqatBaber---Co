@@ -71,14 +71,16 @@ export default function Header() {
             aria-label="Rafaqat Babar & Co. Home"
           >
             <Image
-              src="/images/logos/RBCO LOGO.svg"
+              src={
+                isDarkHeroOverlay
+                  ? "/images/logos/RBCO LOGO WHITE.svg"
+                  : "/images/logos/RBCO LOGO.svg"
+              }
               alt="Rafaqat Babar & Co. logo"
-              width={190}
-              height={44}
+              width={200}
+              height={48}
               priority
-              className={`h-8 sm:h-9 md:h-10 w-auto object-contain transition-all ${
-                isDarkHeroOverlay ? "brightness-0 invert" : ""
-              }`}
+              className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-all"
             />
           </Link>
 
@@ -213,14 +215,16 @@ export default function Header() {
           {/* RIGHT SIDE: LEA LOGO & Mobile Menu Button */}
           <div className="flex items-center gap-3 sm:gap-4 shrink-0 z-10">
             <Image
-              src="/images/logos/LEA LOGO.svg"
+              src={
+                isDarkHeroOverlay
+                  ? "/images/logos/LEA LOGO WHITE.svg"
+                  : "/images/logos/LEA LOGO.svg"
+              }
               alt="LEA Global logo"
               width={140}
               height={40}
               priority
-              className={`h-7 sm:h-8 md:h-9 w-auto object-contain transition-all ${
-                isDarkHeroOverlay ? "brightness-0 invert opacity-90" : "opacity-90 hover:opacity-100"
-              }`}
+              className="h-7 sm:h-8 md:h-9 w-auto object-contain transition-all opacity-95 hover:opacity-100"
             />
 
             {/* Mobile Controls */}
